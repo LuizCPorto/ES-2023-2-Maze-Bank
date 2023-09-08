@@ -23,7 +23,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 Ã
 
 # Casos de uso e User stories
 
-## *RF-1.1 - Registro e Login*
+## *RF-1.1 - Efetuar Cadastro e Login*
 
 #### Autor: @CaioSantdev â€“ Caio Santos Silva.
 
