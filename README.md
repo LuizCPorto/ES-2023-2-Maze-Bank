@@ -11,7 +11,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 #### Iteração 1
 
-- [ ] RF-1.1 Registro e Login. [Caio santos Silva](https://github.com/CaioSantdev) Revisador por @Vitoriamrfontana
+- [ ] RF-1.1 Efetuar Cadastro e Login. [Caio santos Silva](https://github.com/CaioSantdev) Revisador por @Vitoriamrfontana
 
 - [ ] RF-1.2 Painel do Cliente. [Vitoria Maria Reias Fontana](https://github.com/Vitoriamrfontana) Revisado por @Carecovisk
 
