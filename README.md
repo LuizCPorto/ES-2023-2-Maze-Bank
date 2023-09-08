@@ -92,6 +92,10 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 √
 
 ## Prot√≥tipo
 
+![Login](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/f2bed4fa-f3f5-485a-b7b1-30ee2c78925c)
+![Registre-se](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/65627ec8-7f2c-419a-9f34-725aa44c450c)
+
+
 
 ## **RF-1.4 Realizar Pagamentos**
 
