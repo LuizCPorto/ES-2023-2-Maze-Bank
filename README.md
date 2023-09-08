@@ -23,6 +23,76 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 # Casos de uso e User stories
 
+## *RF-1.1 - Registro e Login*
+
+#### Autor: @CaioSantdev – Caio Santos Silva.
+
+---
+
+### Revisor: @Vitoriamrfortana – Vitoria Fortana.
+
+| Item            | Descrição                                                                                                                                                      |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Caso de uso     |  RF-1.1 - Login e cadastro de usuário.                                                                                                                                |
+| Resumo          | A primeiro momento, o cliente fará o cadastro, inserindo seus dados, após isso poderá efetuar o login e gerenciar sua conta, com depósitos e transferências.   |
+| Ator principal  | Ator utilizador da plataforma e novos usuários.                                                                                                                |
+| Ator Secundário | O banco.                                                                                                                |
+| Pré-condição    | Para acessar a plataforma, é necessário conexão com a internet.                                                                                                |
+| Pós-condição    | Para fazer o login o usuário precisa criar uma conta.                                                                                                          |
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                                                                                              |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Passo 1 | O ator deseja utilizar o banco Maze Bank ;                                                                                                          |
+| Passo 2 | A primeiro momento ele não tem uma conta então clica em Registre-se;                                                                                   |
+| Passo 3 | Com isso é exibido um formulário para preencher seus dados;                                                                                            |
+| Passo 4 | Ao preencher os campos necessários o cliente clica em “Criar conta”;                                                                                   |
+| Passo 5 | Em seguida é redirecionado a página de login;                                                                                                          |
+| Passo 6 | Entra em sua conta e pode começar a gerenciar seu dinheiro;                                                                                            |
+
+#### Campos do formulário.
+
+| Campo    | Obrigatório? | Editável? | Formato      |
+| ------------ | ----------------- | ------------ | --------------- |
+| Usuario  | Sim          | Sim       | Texto        |
+| Email       | Sim          | Sim       | Texto        |
+| CPF        | Sim          | Sim       | Alfanumérico        |
+| Senha     | Sim          | Sim       | Texto        |
+| Senha     | Sim          | Sim       | Texto        |
+
+
+#### Opções de usuário
+
+| Opção       | Descrição                 | Atalho |
+| ----------- | ------------------------- | ------ |
+| Criar conta | Confirmar Dados inseridos |
+
+#### Relatório de usuário
+| Campo                    | Descrição                                                             | Formato |
+| ------------------------ | --------------------------------------------------------------------- | ------- |
+| Conta Criada com sucesso | Isso confirma e garante todo êxito na operação de cadastro do usuário | Texto |
+
+#### Fluxo alternativo
+
+| Passos    | Descrição                                                                                                      |
+| --------- | -------------------------------------------------------------------------------------------------------------- |
+| Passo 1.1 | O cliente já tem uma conta.                                                                                       |
+| Passo 1.2 | O cliente já entra na tela de login que é a padrão . |
+| Passo 2.1 | Cliente informa seu usuário e senha para efetuar o login|
+| Passo 2.2 | Caso os dados estiverem errados, é exibido uma mensagem e pede para inserir os dados novamente.|
+| Passo 3.1 | Os dados do cliente confirmam e ele é enviado para Home do banco.|
+
+
+# User story
+
+ |User Story
+ |-------------------------------------
+ | Como um usuário novo do banco gostaria de criar uma nova conta com meus dados para que seja possivel gerenciar minhas contas e dinheiro.
+
+## Protótipo
+
+
 ## **RF-1.4 Realizar Pagamentos**
 
 #### Autor: @LuizCPorto - Luiz Carlos Porto do Carmo.
