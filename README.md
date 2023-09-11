@@ -97,6 +97,60 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 
 
+## **RF-1.3 Realizar Transferências**
+
+#### Autor: @Carecovisk - João Victor Ribeiro Santos.
+
+---
+
+### Revisor: @LuizCPorto - Luiz Carlos Porto
+
+| Item            | Descrição                                                                                                                                                                                               |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Caso de uso     | Realizar pagamentos.                                                                                                                                                                                    |
+| Resumo          | Realizar tranferencias através da cheave de um destinatario.                                                                                                                                                |
+| Ator principal  | Usuário que possui um cadastro.                                                                                                                                                                         |
+| Pré-condição    | O usuário precisa ter acesso a internet, ter saldo em conta ou cartão de credito, e ter a chave do destinatario.                                                                               |
+| Pós-condição    | O destinatario recebeu a tranferencia.
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                                           |
+| ------- | ----------------------------------------------------------------------------------------------------|
+| Passo 1 | Usario define valor a ser transferido.                  |
+| Passo 2 | Usuario define destinatario através do e-mail.                  |
+| Passo 3 | O usuário deve escolher a opção do que vai pagar (Cartão ou Saldo em conta).                        |
+| Passo 4 | Usuario visualiza dados da transferencia e confirma transação com senha                                                     |
+
+
+#### Opções de usuário
+
+| Opção              | Descrição                           |
+| ------------------ | ----------------------------------- |
+| Forma de Pagamento | Escolher a opção de pagamento.      |
+| Cancelar Transação | Cancela a transferencia.            |
+| Confirmar Transação| Confirmar transferencia com senha.  |
+
+#### Fluxo alternativo
+
+| Passos    | Descrição                                                        
+| --------- | -----------------------------------------------------------------
+| Passo 1.1 | Se não tiver saldo na conta o sistema exibirá uma mensagem avisando que está sem saldo.                                                         
+| Passo 2.1 | Se o usuário digitar a senha errada o sistema exibirá uma mensagem avisando que a senha está incorreta.
+| Passo 2.2 | Caso o usuário queira retornar ao painel de cliente terá um botão para retornar.
+
+
+# User story
+
+
+ Eu como cliente maze bank quero fazer transferencias para cumprir com meus compromissos finaceiros, para isso preciso estar logado, escolher um valor, um destinatario, colocar minha senha e confirmar.
+
+# Protótipo
+
+![prototipoPaginaDeTransferencia](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/d004c685-4004-4b03-b57f-18271c2699b4)
+
+
+
 ## **RF-1.4 Realizar Pagamentos**
 
 #### Autor: @LuizCPorto - Luiz Carlos Porto do Carmo.
@@ -149,3 +203,6 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
  | Como usuario eu quero realizar o pagamentos da minha conta. Pra isso eu preciso estar logado, e entrar na opção de pagamentos, digitar meu codigo de barras e confirmar com minha senha.
 
 # Protótipo
+
+
+![prototipoLuiz](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/4947acca-a6dc-4f5c-8e64-28093e10e05b)
