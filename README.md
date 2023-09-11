@@ -147,7 +147,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 # Protótipo
 
-![Imagem do prototipo](prototipoPaginaDeTransferencia.png)
+![prototipoPaginaDeTransferencia](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/d004c685-4004-4b03-b57f-18271c2699b4)
+
 
 
 ## **RF-1.4 Realizar Pagamentos**
@@ -202,3 +203,6 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
  | Como usuario eu quero realizar o pagamentos da minha conta. Pra isso eu preciso estar logado, e entrar na opção de pagamentos, digitar meu codigo de barras e confirmar com minha senha.
 
 # Protótipo
+
+
+![prototipoLuiz](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/4947acca-a6dc-4f5c-8e64-28093e10e05b)
