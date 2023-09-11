@@ -73,6 +73,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 √
 
 # Prot√≥tipo
 
+![Imagem do prototipo](prototipoPaginaDeTransferencia.png)
 
 # Casos de uso e User stories
 
