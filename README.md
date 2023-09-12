@@ -218,10 +218,10 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 | Item            | Descrição                                                                                                                                                                                               |
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Caso de uso     | Consultar Saldo.                                                                                                                                                                                        |
-| Resumo          | Visualizar o saldo do usuário.                                                                                                                                                                          |
-| Ator principal  | Usuário que possui um cadastro.                                                                                                                                                                         |
-| Pré-condição    | O ator necessita ter acesso a internet e estar logado no sistema. 
-                                   |
+| Resumo          | Visualizar o saldo do usuário.                                                                                                                                                                              |
+| Ator principal  | Usuário que possui um cadastro.                                                                                                                                                                                      |
+| Pré-condição    | O ator necessita ter acesso a internet e estar logado no sistema.  
+                                                                                                         |
 | Pós-condição    | Consulta de saldo feita.
 
 #### Fluxo principal
@@ -246,7 +246,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 | Passos    | Descrição                                                        
 | --------- | -----------------------------------------------------------------
-| Passo 1.1 | Se não tiver saldo na conta o sistema exibirá uma mensagem avisando que está sem saldo.                                                         
+| Passo 1.1 | Se não tiver saldo na conta o sistema exibirá uma mensagem avisando que está sem saldo.                                             
 | Passo 2.1 | Se não houver saldo mínimo para saque o sistema irá emitir uma mensagem.
 | Passo 2.2 | Se não houver transações será emitido um alerta dentro da tela de histórico.
 
