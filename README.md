@@ -206,3 +206,58 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 
 ![prototipoLuiz](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/4947acca-a6dc-4f5c-8e64-28093e10e05b)
+
+## **RF-1.5 Consultar saldo**
+
+#### Autor: @Ynguimaraes - Yngrid Guimarães Silva.
+
+---
+
+### Revisor: @CaioSantdev - Caio santos Silva
+
+| Item            | Descrição                                                                                                                                                                                               |
+| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Caso de uso     | Consultar Saldo.                                                                                                                                                                                        |
+| Resumo          | Visualizar o saldo do usuário.                                                                                                                                                                          |
+| Ator principal  | Usuário que possui um cadastro.                                                                                                                                                                         |
+| Pré-condição    | O ator necessita ter acesso a internet e estar logado no sistema. 
+                                   |
+| Pós-condição    | Consulta de saldo feita.
+
+#### Fluxo principal
+
+| Passos  | Descrição                                                                                              |
+| ------- | -------------------------------------------------------------------------------------------------------|
+| Passo 1 | O ator precisar logar em sua conta.                                                                    |
+| Passo 2 | Ao clicar no botão de visualização de saldo o usuário será direcionado para a tela de consulta.        |
+| Passo 3 | O usuário também possui três opções na tela em questão, como depositar, sacar, e visualizar histórico  |
+| Passo 4 | O usuário além de visualizar o saldo pode escolher entre três opções.                                  |
+| Passo 5 | Após realizar a ação desejada o usuário poderá voltar a tela inicial.                                  |
+
+#### Opções de usuário
+
+| Opção              | Descrição                           |
+| ------------------ | ----------------------------------- |
+| Depositar          | Escolher a opção de depositar.      |
+| Sacar              | Escolher a opção de sacar.          |
+| Histórico          | Escolher a opção de histórico.      |
+
+#### Fluxo alternativo
+
+| Passos    | Descrição                                                        
+| --------- | -----------------------------------------------------------------
+| Passo 1.1 | Se não tiver saldo na conta o sistema exibirá uma mensagem avisando que está sem saldo.                                                         
+| Passo 2.1 | Se não houver saldo mínimo para saque o sistema irá emitir uma mensagem.
+| Passo 2.2 | Se não houver transações será emitido um alerta dentro da tela de histórico.
+
+
+# User story
+
+ |User Story
+ |-------------------------------------
+ | Como usuario eu quero visualizar o saldo da minha conta. Pra isso eu preciso estar logado, e entrar na opção de saldo, e visualiza-lo ou clicar na opção desejada.
+
+# Protótipo
+
+
+![RF-1 5 Consultar Saldo (1)](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/020fa71c-0709-40a3-a9ab-5e01a8b95077)
