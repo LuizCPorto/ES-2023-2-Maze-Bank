@@ -11,15 +11,15 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 #### Iteração 1
 
-- [ ] RF-1.1 Efetuar Cadastro e Login. [Caio santos Silva](https://github.com/CaioSantdev) Revisador por @Vitoriamrfontana
+- [X] RF-1.1 Efetuar Cadastro e Login. [Caio santos Silva](https://github.com/CaioSantdev) Revisador por @Vitoriamrfontana
 
-- [ ] RF-1.2 Painel do Cliente. [Vitoria Maria Reias Fontana](https://github.com/Vitoriamrfontana) Revisado por @Carecovisk
+- [X] RF-1.2 Painel do Cliente. [Vitoria Maria Reias Fontana](https://github.com/Vitoriamrfontana) Revisado por @Carecovisk
 
-- [ ] RF-1.3 Realizar Transferências. [João Victor Ribeiro Santos](https://github.com/Carecovisk) Revisado por @LuizCPorto
+- [X] RF-1.3 Realizar Transferências. [João Victor Ribeiro Santos](https://github.com/Carecovisk) Revisado por @LuizCPorto
 
-- [ ] RF-1.4  Realizar Pagamentos [Luiz Carlos Porto do Carmo](https://github.com/LuizCPorto) Revisado por @Ynguimaraes
+- [X] RF-1.4  Realizar Pagamentos [Luiz Carlos Porto do Carmo](https://github.com/LuizCPorto) Revisado por @Ynguimaraes
 
-- [ ] RF-1.5 Consultar Saldo. [Yngrid Guimarães](https://github.com/Ynguimaraes) Revisado por @CaioSantdev
+- [X] RF-1.5 Consultar Saldo. [Yngrid Guimarães](https://github.com/Ynguimaraes) Revisado por @CaioSantdev
 
 # Casos de uso e User stories
 
