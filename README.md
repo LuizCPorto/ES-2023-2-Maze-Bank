@@ -95,50 +95,52 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 ![Login](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/f2bed4fa-f3f5-485a-b7b1-30ee2c78925c)
 ![Registre-se](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/65627ec8-7f2c-419a-9f34-725aa44c450c)
 
-##*1.2 - Painel do Cliente*
+## *RF-1.2 Painel do Cliente*
+
 #### Autor: @Vitoriamrfontana – Vitória Maria Reis Fontana.
+
 ---
+
 ### Revisor: @Carecovisk– João Victor Ribeiro Santos.
-| Item	|Descrição
-|
+
+| Item            | Descrição                                                                                                                                                      |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Caso de uso	| - Painel de controle do cliente.
-| Resumo	| O painel do cliente é a interface principal que permite aos usuários acessarem e gerenciarem suas contas bancárias, realizar transações e obter informações sobre suas finanças. |
-|Ator principal	| Usuário da plataforma, clientes bancários.
-|
+| Caso de uso     |  - Painel de controle do cliente.                                                                                                                                |
+| Resumo          | O painel do cliente é a interface principal que permite aos usuários acessarem e gerenciarem suas contas bancárias, realizar transações e obter informações sobre suas finanças.   |
+| Ator principal  | Usuário da plataforma, clientes bancários.                                                                                                             |
+| Pré-condição    | Para acessar o painel do cliente, é necessário conexão com a internet e uma conta de usuário ativa.                                                                                                |
+| Pós-condição    | Após o login bem-sucedido, o cliente terá acesso total às funcionalidades da plataforma bancária.                                                                                                          |
 
-| Pré-condição	Para acessar o painel do cliente, é necessário conexão com a internet e uma conta de usuário ativa.
-|
+#### Fluxo principal
 
-|Pós-condição	Após o login bem-sucedido, o cliente terá acesso total às funcionalidades da plataforma bancária.
-|
+| Passos  | Descrição                                                                                                                                              |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Passo 1 | O cliente inicia o aplicativo ou acessa o site do banco;                                                                                                          |
+| Passo 2 | O cliente insere suas credenciais de login (nome de usuário e senha);                                                                                   |
+| Passo 3 | O sistema verifica as credenciais e autentica o cliente;                                                                                            |
+| Passo 4 | O cliente é redirecionado para o painel do cliente, onde pode escolher as funcionalidades desejadas;                                                                                   |
+| Passo 5 | O cliente interage com o painel para realizar suas operações bancárias, como verificar o saldo, fazer transferências, pagar contas, entre outras;                                                                                                          |
+| Passo 6 | Após concluir as operações, o cliente pode fazer logout ou sair do painel;                                                                                            |
 
-#### Fluxo Principal
-| Passos	| Descrição
-|
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Passo 1 | O cliente inicia o aplicativo ou acessa o site do banco;
-| Passo 2 | O cliente insere suas credenciais de login (nome de usuário e senha);
-| Passo 3 | O sistema verifica as credenciais e autentica o cliente;
-| Passo 4 | O cliente é redirecionado para o painel do cliente, onde pode escolher as funcionalidades desejadas;
-| Passo 5 | O cliente interage com o painel para realizar suas operações bancárias, como verificar o saldo, fazer transferências, pagar contas, entre outras;
-| Passo 6 | Após concluir as operações, o cliente pode fazer logout ou sair do painel.
+#### Fluxo alternativo
 
-#### Fluxo Alternativo
-| Passos | |Descrição                                                                                                      |
+| Passos    | Descrição                                                                                                      |
 | --------- | -------------------------------------------------------------------------------------------------------------- |
-| Passo 1.1 | O cliente já possui uma sessão ativa ou já está logado. |
+| Passo 1.1 | O cliente já possui uma sessão ativa ou já está logado.                                                                                       |
 | Passo 1.2 | O cliente é direcionado diretamente para o painel inicial após abrir o aplicativo ou acessar o site. |
-| Passo 2.1 | Cliente já está autenticado, não precisa inserir credenciais novamente. |
-| Passo 2.2 | Cliente pode realizar operações diretamente após o login. |
-| Passo 3.1 | Cliente já possui sessão ativa e está logado. |
-| Passo 3.2 | Cliente é direcionado para o painel inicial sem necessidade de novo login. |
+| Passo 2.1 | Cliente já está autenticado, não precisa inserir credenciais novamente.|
+| Passo 2.2 | Cliente pode realizar operações diretamente após o login.|
+| Passo 3.1 | Cliente já possui sessão ativa e está logado.|
+| Passo 3.2 | Cliente é direcionado para o painel inicial sem necessidade de novo login.|
 
-#User story
-| Epic                                                                                                                                                         | User Story                                                                                                                                                                | Critério de aceitação                                                                   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| "Como um cliente bancário, eu quero ter acesso a um painel de controle eficiente para que eu possa gerenciar minhas finanças com facilidade.”	“Como um cliente bancário, desejo um painel intuitivo e de fácil acesso para que eu possa realizar operações bancárias sem complicações.”	Certificar que todas as funcionalidades principais estejam funcionando corretamente.
-Protótipo
+
+# User story
+
+ |User Story
+ |-------------------------------------
+ |  “Como um cliente bancário, eu quero ter acesso a um painel de controle eficiente para que eu possa gerenciar minhas finanças com facilidade.”	“Como um cliente bancário, desejo um painel intuitivo e de fácil acesso para que eu possa realizar operações bancárias sem complicações.”|Certificar que todas as funcionalidades principais estejam funcionando corretamente. |
+
+## Protótipo
 
 ![Desktop - 1](https://uploaddeimagens.com.br/images/004/605/533/original/Desktop_-_1.png?1694561453).
 
