@@ -1,0 +1,11 @@
+{
+    "name": "carli/es-2023-2-maze-bank",
+    "autoload": {
+        "psr-4": {
+            "Carli\\Es20232MazeBank\\": "src/"
+        }
+    },
+    "require": {
+        "firebase/php-jwt": "^6.8"
+    }
+}
