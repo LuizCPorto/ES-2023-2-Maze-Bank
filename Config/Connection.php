@@ -2,7 +2,7 @@
     class Connection {
         function GetConnection(): PDO {
             $host = "localhost";
-            $dbname = "fuck";
+            $dbname = "mazebank";
             $userName = "root";
             $password = "";
             
@@ -16,3 +16,4 @@
             }
         }
     }
+?>
