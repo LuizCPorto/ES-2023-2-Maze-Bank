@@ -21,12 +21,12 @@
       <button id="btnSignup">Registra-se</button>
     </div>
 
-    <form id="signin">
-      <input type="text" placeholder="Usuário" required />
-      <i class="fa fa-envelope iEmail" style="color: #000000;"></i>
-      <input type="password" placeholder="Senha" required />
-      <i class="fa fa-lock iPassword3" style="color: #000000;"></i>
-      <button type="submit">Login</button>
+    <form id="signin" method="POST" action="../controller/LoginController.php">
+        <input type="text" id="usuario" name="nomeUsuario" placeholder="Usuário" required />
+        <i class="fa fa-envelope iEmail" style="color: #000000;"></i>
+        <input type="password" id="senha" name="senha" placeholder="Senha" required />
+        <i class="fa fa-lock iPassword3" style="color: #000000;"></i>
+        <button type="submit">Login</button>
     </form>
 
     <form id="signup">
