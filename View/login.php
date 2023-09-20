@@ -29,16 +29,16 @@
         <button type="submit">Login</button>
     </form>
 
-    <form id="signup">
-      <input type="text" placeholder="Email" required />
+    <form id="signup" method="POST" action="../controller/RegisterController.php">
+      <input type="text" placeholder="Email" name="email" required />
       <i class="fa fa-envelope iEmail" style="color: #000000;"></i>
-      <input type="text" placeholder="Usuario" required/>
+      <input type="text" placeholder="Usuario" name="usuario" required/>
       <i class="fa fa-user iUsuario" style="color: #000000;"></i>
-      <input type="text" placeholder="CPF" required/>
+      <input type="text" placeholder="CPF" name="cpf" required/>
       <i class="fa fa-passport icpf" style="color: #000000;"></i>
-      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Password" name="senha" required />
       <i class="fa fa-lock iPassword" style="color: #000000;"></i>
-      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Password" name="senha2" required />
       <i class="fa fa-lock iPassword2" style="color: #000000;"></i>
       <button type="submit">Registra-se</button>
     </form>
