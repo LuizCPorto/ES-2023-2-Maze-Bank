@@ -20,7 +20,7 @@
       <button id="btnSignin">Login</button>
       <button id="btnSignup">Registra-se</button>
     </div>
-
+    
     <form id="signin" method="POST" action="../controller/LoginController.php">
         <input type="text" id="usuario" name="nomeUsuario" placeholder="Usuário" required />
         <i class="fa fa-envelope iEmail" style="color: #000000;"></i>
