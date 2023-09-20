@@ -42,10 +42,7 @@
       <i class="fa fa-lock iPassword2" style="color: #000000;"></i>
       <button type="submit">Registra-se</button>
     </form>
-
-
   </div>
-
   <script src="index.js"></script>
 </body>
 </html>
