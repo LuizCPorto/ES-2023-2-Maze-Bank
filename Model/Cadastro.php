@@ -1,50 +1,28 @@
 <?php
 
-require_once("./Connection.php");
+class Cadastro{
+    private $dbHost = 'Localhost';
+    private $dbUsername = 'root';
+    private $dbPassword = '';
+    private $dbName = 'mazebank';
+    private $conn;
 
-class Cadastro
-{
+    public function __construct() {
+        $this->conn = new mysqli($this->dbHost, $this->dbUsername, $this->dbPassword, $this->dbName);
 
-    
-
-    function cadastro($username, $email, $cpf, $password): bool
-    {
-        $Conector = new Connection();
-        $conexao = $Conector->getConnection();
-
-        if ($this->usuarioNaoExisteNoBd($cpf, $email, $conexao)) {
-
-            try {
-                $conexao->query("INSERT INTO Usuarios (username, email, cpf, password) VALUES ('$username', '$email', '$cpf', '$password')");
-                $conexao = null;
-                // usuario cadastrado com sucesso
-                return true;
-            } catch (PDOException $th) {
-                echo $th->getMessage();
-            }
-
+        if ($this->conn->connect_error) {
+            die("Conexão falhou: " . $this->conn->connect_error);
+        }
+    }
+    public function inserir($email,$username , $cpf, $senha1, $senha2){
+        $query = "INSERT INTO usuarios (email, usuario, cpf, senha1, senha2) VALUES ('$email', '$username', '$cpf', '$senha1', '$senha2')";
+        // Executar a consulta SQL
+        if ($this->conn->query($query) === TRUE) {
+            $this->conn->close();
+            return true;
         } else {
-            // email ou cpf ja existem
-            $conexao = null;
             return false;
-        }
+        }  
     }
-
-    private function usuarioNaoExisteNoBd($cpf, $email, PDO $conexao): bool
-    {
-
-        try {
-
-            $sql = $conexao->query("SELECT * FROM Usuarios WHERE cpf = '$cpf' OR email = '$email';");
-            $sql = $sql->fetchAll(PDO::FETCH_ASSOC);
-
-        } catch (PDOException $th) {
-
-            echo $th->getMessage();
-        }
-
-        return empty($sql);
-    }
-
-
 }
+?>
