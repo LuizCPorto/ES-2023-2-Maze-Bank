@@ -34,9 +34,23 @@ document.getElementById('signin').addEventListener('submit', function (e) {
   })
     .then(response => response.text())
     .then(data => {
-      alert(data);
+      console.log(data);
+      if(data === "Usuário não encontrado.") {
+        alert("Usuário não encontrado!");
+      }
+      
+      //entra aqui quando for sucesso!
+      if(data === "Login feito com sucesso") {
+        alert("Login feito com sucesso");
+        window.location.href = "home.php";
+      }
+
+      if(data === "Senha incorreta.") {
+        alert("Senha incorreta, tente novamente!");
+      }
     })
     .catch(error => {
+      //entra aqui quando a autenticação der errado
       alert('Erro ao processar a solicitação: ' + error);
     });
 });

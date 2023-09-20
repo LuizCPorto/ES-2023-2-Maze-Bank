@@ -18,4 +18,12 @@ class LoginController {
         return $resultado;
     }
 }
+
+if($_SERVER["REQUEST_METHOD"] === "POST") {
+    $loginController = new LoginController();
+    $nomeUsuario = $_POST['nomeUsuario'];
+    $senha = $_POST['senha'];
+    $resultadoLogin = $loginController->realizarLogin($nomeUsuario, $senha);
+    echo $resultadoLogin;
+}
 ?>
