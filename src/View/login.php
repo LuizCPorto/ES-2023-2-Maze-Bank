@@ -32,13 +32,13 @@
     <form id="signup" method="POST" action="../controller/RegisterController.php">
       <input type="text" placeholder="Email" name="email" required />
       <i class="fa fa-envelope iEmail" style="color: #000000;"></i>
-      <input type="text" placeholder="Usuario" name="usuario" required/>
+      <input type="text" placeholder="Usuario" name="nome" required/>
       <i class="fa fa-user iUsuario" style="color: #000000;"></i>
       <input type="text" placeholder="CPF" name="cpf" required/>
       <i class="fa fa-passport icpf" style="color: #000000;"></i>
-      <input type="password" placeholder="Password" name="senha" required />
+      <input type="password" id="senha1" placeholder="Password" name="senha4" required />
       <i class="fa fa-lock iPassword" style="color: #000000;"></i>
-      <input type="password" placeholder="Password" name="senha2" required />
+      <input type="password" id="senha2" placeholder="Password" name="senha5" required />
       <i class="fa fa-lock iPassword2" style="color: #000000;"></i>
       <button type="submit">Registra-se</button>
     </form>

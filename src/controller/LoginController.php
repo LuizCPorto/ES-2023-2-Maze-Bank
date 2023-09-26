@@ -30,24 +30,9 @@ class LoginController {
 
             // Substitua "sua_chave_secreta" pela sua chave real.
             $jwtKey = "62486684269Pp2023";
-
             $token = JWT::encode($payload, $jwtKey, "HS256");
 
-            // Registre o token em um arquivo de log
-            $logFile = fopen("token_log.txt", "a");
-
-            if ($logFile) {
-                // Registre o token no arquivo de log
-                fwrite($logFile, "Token JWT gerado: " . $token . "\n");
-
-                // Feche o arquivo de log
-                fclose($logFile);
-            } else {
-                echo "Erro ao abrir o arquivo de log.";
-            }
-
             setcookie('jwt_token', $token, time() + 3600, '/');
-
             // Redireciona para a página inicial após o login bem-sucedido.
             return $resultado;
             header("Location: ../view/home.php");
