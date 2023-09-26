@@ -57,35 +57,35 @@ document.getElementById('signin').addEventListener('submit', function (e) {
     });
 });
 
-// document.getElementById('signup').addEventListener('submit',function (e){
-//   e.preventDefault();
+document.getElementById('signup').addEventListener('submit',function (e){
+  e.preventDefault();
 
-//   var senha1 = document.getElementById('senha1').value;
-//   var senha2 = document.getElementById('senha2').value;
+  var senha1 = document.getElementById('senha1').value;
+  var senha2 = document.getElementById('senha2').value;
 
-//   var formData = new FormData();
-//   formData.append('senha,',senha1);
-//   formData.append('senha2,',senha2);
-//   console.log(senha1)
-//   console.log(senha2)
+  var formData = new FormData();
+  formData.append('senha,',senha1);
+  formData.append('senha2,',senha2);
+  console.log(senha1)
+  console.log(senha2)
 
-//   fetch('../controller/RegisterController.php',{
-//     method:'POST',
-//     body:formData
-//   })
-//   .then(response => response.text())
-//   .then(data => {
-//     console.log(data);
-//     if(data == "Senhas nao coincidem."){
-//       alert("Senhas nao coincidem.");
-//     }
-//     if(data == "Registro feito com sucesso!") {
-//       alert("Registro feito com sucesso!");
-//       window.location.href = "home.php";
-//     }
-//   })
-//   .catch(error => {
-//     alert('Erro ao processar a solicitação: ' + error);
-//   })
-// })
+  fetch('../controller/RegisterController.php',{
+    method:'POST',
+    body:formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    console.log(data);
+    if(data == "Senhas nao coincidem."){
+      alert("Senhas nao coincidem.");
+    }
+    if(data == "Registro feito com sucesso!") {
+      alert("Registro feito com sucesso!");
+      window.location.href = "home.php";
+    }
+  })
+  .catch(error => {
+    alert('Erro ao processar a solicitação: ' + error);
+  })
+})
 
