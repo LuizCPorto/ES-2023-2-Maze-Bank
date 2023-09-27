@@ -26,19 +26,20 @@
         <i class="fa fa-envelope iEmail" style="color: #000000;"></i>
         <input type="password" id="senha" name="senha" placeholder="Senha" required />
         <i class="fa fa-lock iPassword3" style="color: #000000;"></i>
+        <a href="confirmemail.php" class="reg">Esqueceu sua senha?</a>
         <button type="submit">Login</button>
     </form>
 
     <form id="signup" method="POST" action="../controller/RegisterController.php">
-      <input type="text" id="email" name="email" placeholder="Email"  required />
+      <input type="text" placeholder="Email" name="email" required />
       <i class="fa fa-envelope iEmail" style="color: #000000;"></i>
-      <input type="text" id="usuarioRegistro" name="usuarioRegistro" placeholder="Usuario"  required/>
+      <input type="text" placeholder="Usuario" name="usuario" required/>
       <i class="fa fa-user iUsuario" style="color: #000000;"></i>
-      <input type="text" id="cpf" name="cpf" placeholder="CPF"  required/>
+      <input type="text" placeholder="CPF" name="cpf" required/>
       <i class="fa fa-passport icpf" style="color: #000000;"></i>
-      <input type="password" id="senha1" name="senha1" placeholder="Password"  required />
+      <input type="password" placeholder="Password" name="senha" required />
       <i class="fa fa-lock iPassword" style="color: #000000;"></i>
-      <input type="password" id="senha2"name="senha2" placeholder="Password"  required />
+      <input type="password" placeholder="Password" name="senha2" required />
       <i class="fa fa-lock iPassword2" style="color: #000000;"></i>
       <button type="submit">Registra-se</button>
     </form>
