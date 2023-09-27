@@ -12,6 +12,8 @@ class Database{
         if ($this->conn->connect_error) {
             die("Conexão falhou: " . $this->conn->connect_error);
         }
+        // start sessao
+        session_start();
     }
     public function fazerLogin($nomeUsuario, $senha) {
         $query = "SELECT senha1 FROM usuarios WHERE usuario = ?";
@@ -36,6 +38,7 @@ class Database{
                 
                 if ($senha === $senhaArmazenada) {
                     $stmt->close(); // Feche a declaração
+                    $_SESSION['usuario'] = $nomeUsuario;
                     return "Login feito com sucesso";
                 } else {
                     $stmt->close(); // Feche a declaração
@@ -49,6 +52,16 @@ class Database{
             return "Erro ao executar a consulta.";
         }
     }
+        // Função para verificar se o usuário está logado
+        public function estaLogado() {
+            return isset($_SESSION['usuario']);
+        }
+        
+        // Função para fazer logout
+        public function fazerLogout() {
+            // Encerre a sessão
+            session_destroy();
+        }
     
 }
 ?>
