@@ -80,7 +80,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
     .then(response => response.text())
     .then(data => {
       console.log(data);
-      if(data == "Senhas nao concidem."){
+      if(data == "Senhas nao coincidem."){
         alert("Senhas nao coincidem.");
       }
       else if(data == "Email ou CPF já cadastrado!"){

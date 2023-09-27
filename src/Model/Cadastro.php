@@ -18,14 +18,13 @@ class Cadastro{
      $query = "INSERT INTO usuarios (email, usuario, cpf, senha1, senha2) VALUES ('$email', '$usuario', '$cpf', '$senha1', '$senha2')";
      $queryBusca = "SELECT cpf,email FROM usuarios WHERE cpf = '$cpf' OR email = '$email'";
     $bucas = $this->conn->query($queryBusca);
-    $this->conn->close();
     $row = mysqli_num_rows($bucas);
-    echo $row;
 
      if($senha1 != $senha2){
         return "Senhas nao coincidem.";
      }
-     elseif($row > 1){
+     elseif($row > 0){
+        $this->conn->close();
         return "Email ou CPF já cadastrado!";
      }
      else{
