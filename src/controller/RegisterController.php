@@ -20,7 +20,7 @@ class RegisterController{
 }
 if($_SERVER["REQUEST_METHOD"] === "POST") {
     $registercontroler = new RegisterController();
-    $nome = $_POST['usuario'];
+    $nome = $_POST['usuarioRegistro'];
     $email = $_POST['email'];
     $cpf = $_POST['cpf'];
     $senha = $_POST['senha1'];

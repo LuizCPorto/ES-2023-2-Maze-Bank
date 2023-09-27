@@ -30,13 +30,13 @@
     </form>
 
     <form id="signup" method="POST" action="../controller/RegisterController.php">
-      <input type="text" name="email" placeholder="Email"  required />
+      <input type="text" id="email" name="email" placeholder="Email"  required />
       <i class="fa fa-envelope iEmail" style="color: #000000;"></i>
-      <input type="text" name="usuario" placeholder="Usuario"  required/>
+      <input type="text" id="usuarioRegistro" name="usuarioRegistro" placeholder="Usuario"  required/>
       <i class="fa fa-user iUsuario" style="color: #000000;"></i>
-      <input type="text" name="cpf" placeholder="CPF"  required/>
+      <input type="text" id="cpf" name="cpf" placeholder="CPF"  required/>
       <i class="fa fa-passport icpf" style="color: #000000;"></i>
-      <input type="password" id="senha1"name="senha1" placeholder="Password"  required />
+      <input type="password" id="senha1" name="senha1" placeholder="Password"  required />
       <i class="fa fa-lock iPassword" style="color: #000000;"></i>
       <input type="password" id="senha2"name="senha2" placeholder="Password"  required />
       <i class="fa fa-lock iPassword2" style="color: #000000;"></i>
