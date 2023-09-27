@@ -1,3 +1,14 @@
+<?php
+include_once '../Model/conectionLogin.php';
+
+session_start();
+
+if(!isset($_SESSION['usuario'])){
+    header('Location: login.php?false');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,7 +102,7 @@
     </footer>
 </body>
 </html>
-Este é um exemplo básico e estático de uma página inicial para o MazeBank. Lembre-se de que um site real de um banco exigiria recursos adicionais, como autenticação de usuário, segurança aprimorada e interações mais complexas. Certifique-se de seguir as melhores práticas de segurança e design ao criar um site real para uma instituição financeira.
+Oportunidade unica! Emprestimos com juros de apenas 15%!!!
 
 
 
