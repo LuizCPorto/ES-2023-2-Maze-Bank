@@ -13,27 +13,6 @@ class Database{
             die("Conexão falhou: " . $this->conn->connect_error);
         }
     }
-    public function teste($nomeUsuario, $senha) {
-        $query = "SELECT senha1 FROM usuario WHERE nome = '$nomeUsuario'";
-        $result = $this->conn->query($query);
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $senhaArmazenada = $row["senha1"];
-
-            if ($senha === $senhaArmazenada) {
-                $this->conn->close();
-                return "Login feito com sucesso";
-            } else {
-                $this->conn->close();
-                return "Senha incorreta.";
-            }
-        } else {
-            $this->conn->close();
-            return "Usuário não encontrado.";
-        }
-    }
-
     public function fazerLogin($nomeUsuario, $senha) {
         $query = "SELECT senha1 FROM usuarios WHERE usuario = ?";
         

@@ -23,9 +23,11 @@ document.getElementById('signin').addEventListener('submit', function (e) {
   var usuario = document.getElementById('usuario').value;
   var senha = document.getElementById('senha').value;
 
+
   var formData = new FormData();
   formData.append('nomeUsuario', usuario);
   formData.append('senha', senha);
+
 
   //REQUISIÇÃO
   fetch('../controller/LoginController.php', {
@@ -54,4 +56,42 @@ document.getElementById('signin').addEventListener('submit', function (e) {
       alert('Erro ao processar a solicitação: ' + error);
     });
 });
+
+  document.getElementById('signup').addEventListener('submit',function (e){
+    e.preventDefault();
+
+    var email = document.getElementById('email').value;
+    var usuarioRegistro = document.getElementById('usuarioRegistro').value;
+    var cpf = document.getElementById('cpf').value;
+    var senha1 = document.getElementById('senha1').value;
+    var senha2 = document.getElementById('senha2').value;
+
+    var formData = new FormData();
+    formData.append("email",email);
+    formData.append("usuarioRegistro",usuarioRegistro);
+    formData.append("cpf",cpf);
+    formData.append("senha1",senha1);
+    formData.append("senha2",senha2);
+
+    fetch('../controller/RegisterController.php',{
+      method:'POST',
+      body:formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      console.log(data);
+      if(data == "Senhas nao coincidem."){
+        alert("Senhas nao coincidem.");
+      }
+      else if(data == "Email ou CPF já cadastrado!"){
+        alert("Email ou CPF já cadastrado!");
+      }
+      if(data == "Registro feito com sucesso!") {
+        alert("Registro feito com sucesso!");
+      }
+    })
+    .catch(error => {
+      alert('Erro ao processar a solicitação: ' + error);
+    })
+  })
 

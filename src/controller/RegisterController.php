@@ -20,12 +20,12 @@ class RegisterController{
 }
 if($_SERVER["REQUEST_METHOD"] === "POST") {
     $registercontroler = new RegisterController();
-    $nome = $_POST['usuario'];
+    $nome = $_POST['usuarioRegistro'];
     $email = $_POST['email'];
     $cpf = $_POST['cpf'];
-    $senha = $_POST['senha'];
+    $senha = $_POST['senha1'];
     $senha2 = $_POST['senha2'];
-    $resultadoRegistro = $registercontroler->inserirdados($email, $nome,$cpf,$senha,$senha2);
+    $resultadoRegistro = $registercontroler->inserirdados($email,$nome,$cpf,$senha,$senha2);
     echo $resultadoRegistro;
 }
 ?>

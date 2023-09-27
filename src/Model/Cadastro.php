@@ -14,15 +14,28 @@ class Cadastro{
             die("Conexão falhou: " . $this->conn->connect_error);
         }
     }
-    public function inserir($email,$username , $cpf, $senha1, $senha2){
-        $query = "INSERT INTO usuarios (email, usuario, cpf, senha1, senha2) VALUES ('$email', '$username', '$cpf', '$senha1', '$senha2')";
-        // Executar a consulta SQL
-        if ($this->conn->query($query) === TRUE) {
+    public function inserir($email,$usuario,$cpf,$senha1,$senha2){
+     $query = "INSERT INTO usuarios (email, usuario, cpf, senha1, senha2) VALUES ('$email', '$usuario', '$cpf', '$senha1', '$senha2')";
+     $queryBusca = "SELECT cpf,email FROM usuarios WHERE cpf = '$cpf' OR email = '$email'";
+    $bucas = $this->conn->query($queryBusca);
+    $row = mysqli_num_rows($bucas);
+
+     if($senha1 != $senha2){
+        return "Senhas nao coincidem.";
+     }
+     elseif($row > 0){
+        $this->conn->close();
+        return "Email ou CPF já cadastrado!";
+     }
+     else{
+        if ($this->conn->query($query) === TRUE){
             $this->conn->close();
-            return true;
-        } else {
-            return false;
-        }  
+            return "Registro feito com sucesso!";
+        }
+        else{
+            return "Nao foi possivel fazr o Cadastro.";
+        }
+     }
     }
 }
 ?>
