@@ -16,10 +16,15 @@
   </div>
   <div class="container">
     <form id="formulario" method="POST" action="">
-        <span>Detalhes</span>
+        <span id="title" style="color: white;">Detalhes da conta</span>
         <input type="text" id="conta" name="tipoConta" placeholder="Tipo de conta" required />
-        <input type="text" id="conta" name="tipoConta" placeholder="Tipo de conta" required />
-        <input type="text" id="conta" name="tipoConta" placeholder="Tipo de conta" required />
+        <input type="text" id="cartão" name="limiteCartao" placeholder="Limite do cartão" required />
+
+        <span style="color: white;">Cliente premium?</span><br>
+        <input type="radio" name="tipoCliente" id="isPremium">
+        <label for="isPremiun">Sim</label><br>
+        <input type="radio" name="tipoCliente" id="isNotPremium">
+        <label for="isNotPremiun">Não</label><br>
         <!-- <i class="fa fa-envelope iEmail" style="color: #000000;"></i> -->
         <button type="submit">Confirmar</button>
         <br>
