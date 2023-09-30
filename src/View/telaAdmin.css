@@ -14,7 +14,7 @@ body {
 
 section#formulario {
     width: 35%;
-    visibility: visible;
+    visibility: hidden;
 }
 
 section#table {

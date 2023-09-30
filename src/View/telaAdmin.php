@@ -46,11 +46,27 @@
                     <td>Maria</td>
                     <td>maria@gmail.com</td>
                     <td>000000000-00</td>
-                    <td><button>Ver</button><button>Alterar</button><button>Excluir</button></td>
+                    <td>
+                        <button>Ver</button>
+                        <button onclick="mostrarForm()">Alterar</button>
+                        <button>Excluir</button></td>
                 </tr>
             </table>
         </section>
     </div>
+
+    <script>
+        function mostrarForm() {
+            let form =document.getElementById("formulario");
+            if (form.style.visibility === "visible") {
+                form.style.visibility = "hidden";               
+            }
+            else {
+                form.style.visibility = "visible";
+            }
+        }
+    </script>
+
 </body>
 
 </html>
