@@ -13,7 +13,7 @@
         <img src="logo.webp" alt="logo mazebank">
     </header>
 
-    <section id="section-left">
+    <section id="formulario">
         <form action="" method="post">
             <h3>Alterar dados</h3>
             <label for="tipoDaConta">Tipo da conta</label><br>
@@ -24,11 +24,12 @@
             <input type="radio" name="premium" id="radio1" value="premium">
             <label for="radio1">Premium</label><br>
             <input type="radio" name="premium" id="radio2" value="comum">
-            <label for="radio2">Comum</label>
+            <label for="radio2">Comum</label><br>
+            <input type="submit" value="Alterar">
         </form>
     </section>
 
-    <section id="section-right">
+    <section id="table">
         <table>
             <tr id="cabeçario">
                 <td>Usuario</td>
