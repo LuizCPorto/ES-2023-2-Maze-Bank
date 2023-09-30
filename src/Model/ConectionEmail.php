@@ -1,8 +1,8 @@
 <?php
 class Database{
     private $dbHost = 'Localhost';
-    private $dbUsername = 'root';
-    private $dbPassword = '';
+    private $dbUsername = 'carecocisk';
+    private $dbPassword = '12345678';
     private $dbName = 'mazebank';
     private $conn;
 
