@@ -7,6 +7,14 @@ html, body {
   height: 100%;
   font-family: 'Poppins', sans-serif;
 }
+.no-underline {
+  text-decoration: none;
+}
+
+/* Tornar o texto branco */
+.no-underline {
+  color: #ffffff; /* Cor branca */
+}
 
 .login-esquerda{
   width: 50vw;
