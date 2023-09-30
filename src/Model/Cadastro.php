@@ -2,8 +2,8 @@
 
 class Cadastro{
     private $dbHost = 'Localhost';
-    private $dbUsername = 'carecocisk';
-    private $dbPassword = '12345678';
+    private $dbUsername = 'root';
+    private $dbPassword = '';
     private $dbName = 'mazebank';
     private $conn;
 
