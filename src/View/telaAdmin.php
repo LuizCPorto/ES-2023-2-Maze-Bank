@@ -14,6 +14,9 @@
     </header>
 
     <div id="conteiner">
+
+    <!-- Formulario de alteração de dados -->
+
         <section id="formulario">
             <form action="" method="post">
                 <h3>Alterar dados</h3>
@@ -35,6 +38,8 @@
             </form>
         </section>
 
+        <!-- Tabela com informações do usuario -->
+
         <section id="table">
             <table>
                 <tr id="cabeçario">
@@ -49,11 +54,27 @@
                     <td>
                         <button>Ver</button>
                         <button onclick="mostrarForm()">Alterar</button>
-                        <button>Excluir</button></td>
+                        <button onclick= "abrirDialog()">Excluir</button>
+                    </td>
                 </tr>
             </table>
         </section>
+
     </div>
+
+    <!-- Dialo de confirmação para exclusão de usuario -->
+
+    <dialog id="excluir">
+        <h3>Tem certeza de que deseja fazer isso?</h3>
+        <p>Os dados do usuario serão excluidos permanentemente</p>
+
+        <form action="" method="post">
+            <!-- Confirmar -->
+            <input type="submit" value="Excluir">
+        </form>
+        <!-- Cancelar -->
+        <button onclick="fecharDialog()">Cancelar</button>
+    </dialog>
 
     <script>
         function mostrarForm() {
@@ -64,6 +85,16 @@
             else {
                 form.style.visibility = "visible";
             }
+        }
+
+        function abrirDialog() {
+            const dialog =document.getElementById("excluir");
+            dialog.showModal();
+        }
+
+        function fecharDialog() {
+            const dialog =document.getElementById("excluir");
+            dialog.close();
         }
     </script>
 
