@@ -87,7 +87,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
         alert("Email ou CPF já cadastrado!");
       }
       if(data == "Registro feito com sucesso!") {
-        window.location.href = "./formularioCliente.php";
+        window.location.href = "./'detalhes da conta'/formularioCliente.php";
       }
     })
     .catch(error => {
