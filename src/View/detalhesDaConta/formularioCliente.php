@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="login-esquerda">
-    <img src="logo.webp" class="image" alt="mazebank">
+    <img src="../logo.webp" class="image" alt="mazebank">
     <h1>MAZE BANK</h1>
     <h2>Banco de Palmas</h2>
   </div>

@@ -10,7 +10,7 @@
 
 <body>
     <header>
-        <img src="logo.webp" alt="logo mazebank">
+        <img src="../logo.webp" alt="logo mazebank">
     </header>
 
     <div id="conteiner">
