@@ -52,7 +52,7 @@
                     <td>maria@gmail.com</td>
                     <td>000000000-00</td>
                     <td>
-                        <button>Ver</button>
+                        <button onclick="abriInformaçoes()">Ver</button>
                         <button onclick="mostrarForm()">Alterar</button>
                         <button onclick= "abrirDialog()">Excluir</button>
                     </td>
@@ -62,7 +62,7 @@
 
     </div>
 
-    <!-- Dialo de confirmação para exclusão de usuario -->
+    <!-- Dialogo de confirmação para exclusão de usuario -->
 
     <dialog id="excluir">
         <h3>Tem certeza de que deseja fazer isso?</h3>
@@ -74,6 +74,14 @@
         </form>
         <!-- Cancelar -->
         <button onclick="fecharDialog()">Cancelar</button>
+    </dialog>
+
+    <!-- Dialogo de informações adicionais do usuario -->
+
+    <dialog id="informaçoesAdicionais">
+        <h3>Detalhes do usuario</h3>
+        função que retorna mais dados do usuario <br>
+        <button onclick="fecharInformaçoes()">Fechar</button>
     </dialog>
 
     <script>
@@ -94,6 +102,16 @@
 
         function fecharDialog() {
             const dialog =document.getElementById("excluir");
+            dialog.close();
+        }
+
+        function abriInformaçoes() {
+            const dialog =document.getElementById("informaçoesAdicionais");
+            dialog.showModal();
+        }
+
+        function fecharInformaçoes() {
+            const dialog =document.getElementById("informaçoesAdicionais");
             dialog.close();
         }
     </script>

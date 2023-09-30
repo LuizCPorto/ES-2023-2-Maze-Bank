@@ -52,7 +52,7 @@ header img {
 }
 
 table{
-    background-color: aqua;
+    background-color: #e780a7;
     width: 90%;
     margin: 60px auto;
 }
@@ -63,7 +63,7 @@ tr {
 
 tr#cabeçario {
     font-weight: bold;
-    background-color: blueviolet;
+    background-color: #b91a1a;
     color: white;
 }
 
