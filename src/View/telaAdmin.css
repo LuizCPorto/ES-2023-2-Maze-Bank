@@ -1,0 +1,37 @@
+html,
+body {
+    background-color: #cbc8c8;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: rgb(185, 26, 26);
+}
+
+header img {
+    width: 100px;
+    margin-left: 70px;
+}
+
+table{
+    background-color: aqua;
+    width: 60%;
+    margin: 60px auto;
+}
+
+tr {
+    line-height: 30px;
+}
+
+tr#cabeçario {
+    font-weight: bold;
+    background-color: blueviolet;
+    color: white;
+}
+
+td {
+    padding: 2px 5px;
+}

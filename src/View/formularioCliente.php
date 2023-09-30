@@ -21,9 +21,9 @@
         <input type="text" id="cartão" name="limiteCartao" placeholder="Limite do cartão" required />
 
         <span style="color: white;">Cliente premium?</span><br>
-        <input type="radio" name="tipoCliente" id="isPremium">
+        <input type="radio" name="tipoCliente" id="isPremium" value="sim" required>
         <label for="isPremiun">Sim</label><br>
-        <input type="radio" name="tipoCliente" id="isNotPremium">
+        <input type="radio" name="tipoCliente" id="isNotPremium" value="nao" required>
         <label for="isNotPremiun">Não</label><br>
         <!-- <i class="fa fa-envelope iEmail" style="color: #000000;"></i> -->
         <button type="submit">Confirmar</button>
