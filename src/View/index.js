@@ -46,7 +46,10 @@ document.getElementById('signin').addEventListener('submit', function (e) {
         alert("Login feito com sucesso");
         window.location.href = "home.php";
       }
-
+      if(data === "admin") {
+        alert("admin");
+        window.location.href = "crud.php";
+      }
       if(data === "Senha incorreta.") {
         alert("Senha incorreta, tente novamente!");
       }
