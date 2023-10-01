@@ -41,7 +41,7 @@
       <i class="fa fa-lock iPassword" style="color: #000000;"></i>
       <input type="password" id="senha2"name="senha2" placeholder="Password"  required />
       <i class="fa fa-lock iPassword2" style="color: #000000;"></i>
-      <button type="submit">Registra-se</button>
+      <button type="submit">Registrar-se</button>
     </form>
   </div>
   <script src="index.js"></script>

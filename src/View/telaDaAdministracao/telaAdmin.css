@@ -1,0 +1,80 @@
+html,
+body {
+    background-color: #cbc8c8;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+#conteiner {
+    display: flex;
+    width: 100%;
+}
+
+section#formulario {
+    width: 35%;
+    visibility: hidden;
+}
+
+section#table {
+    width: 65%;
+}
+
+label, input[type="text"] {
+    line-height: 30px;
+    outline: none;
+    font-size: 13pt;
+    width: 100%;
+    border-radius: 10px;
+}
+
+div form {
+    width: 325px;
+    background-color: rgb(185, 26, 26);
+    padding: 20px;
+    margin: 30px 0px 0 190px;
+    border-radius: 10px;
+}
+
+div input[type="submit"]{
+    margin-top: 10px;
+}
+
+header {
+    background-color: rgb(185, 26, 26);
+    margin-bottom: 80px;
+}
+
+header img {
+    width: 100px;
+    margin: 20px 70px;
+}
+
+table{
+    background-color: #e780a7;
+    width: 90%;
+    margin: 60px auto;
+}
+
+tr {
+    line-height: 30px;
+}
+
+tr#cabeçario {
+    font-weight: bold;
+    background-color: #b91a1a;
+    color: white;
+}
+
+td {
+    padding: 2px 5px;
+}
+
+button {
+    margin-left: 10px;
+}
+
+dialog form input, dialog form {
+    display: inline;
+}

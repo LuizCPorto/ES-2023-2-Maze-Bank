@@ -87,11 +87,12 @@ document.getElementById('signin').addEventListener('submit', function (e) {
         alert("Email ou CPF já cadastrado!");
       }
       if(data == "Registro feito com sucesso!") {
-        alert("Registro feito com sucesso!");
+        window.location.href = "./detalhesDaConta/formularioCliente.php";
       }
     })
     .catch(error => {
       alert('Erro ao processar a solicitação: ' + error);
     })
   })
+
 
