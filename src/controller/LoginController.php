@@ -38,7 +38,7 @@ class LoginController {
                 setcookie('jwt_token', $token, time() + 3600, '/');
                 // Redireciona para a página inicial após o login bem-sucedido.
                 return $resultado;
-                header("Location: ../view/home.php");
+                header("Location: ../view/detalhesDaConta/formularioCliente.php");
             } else {
                 // Em caso de falha, redireciona o usuário de volta para a página de login com uma mensagem de erro.
                 return $resultado;
