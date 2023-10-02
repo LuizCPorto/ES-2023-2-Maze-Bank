@@ -44,7 +44,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
       //entra aqui quando for sucesso!
       if(data === "Login feito com sucesso") {
         alert("Login feito com sucesso");
-        window.location.href = "home.php";
+        window.location.href = "formularioCliente.php";
       }
       if(data === "admin") {
         alert("admin");
