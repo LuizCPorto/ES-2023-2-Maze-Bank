@@ -18,6 +18,9 @@ if (!empty($_GET['id'])) {
       $cpf = $user_data['cpf'];
       $senha = $user_data['senha1'];
       $senha2 = $user_data['senha2'];
+      $conta = $user_data['conta'];
+      $limite = $user_data['limite'];
+      $premium = $user_data['premium'];
     }
   } else {
     header('Location: crud.php');
