@@ -16,16 +16,17 @@
   </div>
   <div class="container">
     <form id="formulario" method="POST" action="../controller/formController.php">
-        <span id="title" style="color: white;">Detalhes da conta</span>
+        <span id="title" style="color: white;">Detalhes da conta</span>    
         <input type="text" id="conta" name="tipoConta" placeholder="Tipo de conta" required />
         <input type="text" id="cartão" name="limiteCartao" placeholder="Limite do cartão" required />
+        <input type="text" id="cpf" name="cpfUser" placeholder="CPF" required />
 
         <span style="color: white;">Cliente premium?</span><br>
         <input type="radio" name="tipoCliente" id="isPremium" value="sim" required>
         <label for="isPremiun">Sim</label><br>
         <input type="radio" name="tipoCliente" id="isNotPremium" value="nao" required>
         <label for="isNotPremiun">Não</label><br>
-        <!-- <i class="fa fa-envelope iEmail" style="color: #000000;"></i> -->
+        
         <button type="submit">Confirmar</button>
         <br>
     </form>
