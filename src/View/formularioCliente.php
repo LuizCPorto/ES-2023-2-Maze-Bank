@@ -10,12 +10,12 @@
 </head>
 <body>
   <div class="login-esquerda">
-    <img src="../logo.webp" class="image" alt="mazebank">
+    <img src="logo.webp" class="image" alt="mazebank">
     <h1>MAZE BANK</h1>
     <h2>Banco de Palmas</h2>
   </div>
   <div class="container">
-    <form id="formulario" method="POST" action="">
+    <form id="formulario" method="POST" action="../controller/formController.php">
         <span id="title" style="color: white;">Detalhes da conta</span>
         <input type="text" id="conta" name="tipoConta" placeholder="Tipo de conta" required />
         <input type="text" id="cartão" name="limiteCartao" placeholder="Limite do cartão" required />
