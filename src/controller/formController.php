@@ -4,30 +4,42 @@ require_once '../Model/Conectionform.php';
 
 class formController{
 
-    private $form;
+    private $database;
 
     public function __construct(){
-        $this->form = new Database();
+        $this->database = new Database();
     }
 
-    public function inserirdados($tipoConta, $limiteCartao, $tipoCliente){
-        if(empty($tipoConta) || empty($limiteCartao)){
+    public function inserirdados($cpfUser, $tipoConta, $limiteCartao, $tipoCliente){
+        if(empty($tipoConta) || empty($limiteCartao) || empty($cpfUser)){
             return "Por favor, preencha todos os campos.";
-        } else{
-            $result = $this->form->configcont($tipoConta, $limiteCartao, $tipoCliente);
-            return $result;
         }
+        
+        $result = $this->database->configcont($cpfUser ,$tipoConta, $limiteCartao, $tipoCliente);
+
+        if (strpos($result, "Dados atualizados com sucesso") !== false){
+
+            header("Location: ../View/home.php");
+            exit();
+        }else{
+            echo "erro";
+            exit();
+        }
+           
+
+
     }
 
 }
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     $formController = new formController();
+    $cpfUser = $_POST['$cpfUser'];
     $tipoConta = $_POST['tipoConta'];
     $limiteCartao = $_POST['limiteCartao'];
     $tipoCliente = $_POST['tipoCliente'];
-    $resultdoform = $formController->inserirdados($tipoConta, $limiteCartao, $tipoCliente);
-    echo $resultdoform;
+    $result = $formController->inserirdados($cpfUser, $tipoConta, $limiteCartao, $tipoCliente);
+    echo $result;
 }
 
 ?>

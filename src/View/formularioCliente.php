@@ -15,7 +15,7 @@
     <h2>Banco de Palmas</h2>
   </div>
   <div class="container">
-    <form id="formulario" method="POST" action="../controller/formController">
+    <form id="formulario" method="POST" action="../controller/formController.php">
         <span id="title" style="color: white;">Detalhes da conta</span>
         <input type="text" id="conta" name="tipoConta" placeholder="Tipo de conta" required />
         <input type="text" id="cartão" name="limiteCartao" placeholder="Limite do cartão" required />

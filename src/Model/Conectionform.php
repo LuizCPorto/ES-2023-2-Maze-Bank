@@ -15,34 +15,46 @@ class Database {
         session_start();
     }
 
-    public function configcont($tipoConta, $limiteCartao, $tipoCliente) {
-        if (isset($_SESSION['usuario'])) {
-            $nomeuser = $_SESSION['usuario'];
+    public function teste($cpfUser){
+        $query = "SELECT cpf FROM usuarios WHERE cpf = ?";
+        $stmt = $this->conn->prepare($query);
 
-            // Verifique se o usuário já possui um registro
-            $query = "SELECT usuario FROM usuarios WHERE usuario = ?";
-            $stmt = $this->conn->prepare($query);
-            $stmt->bind_param("s", $nomeuser);
-            $stmt->execute();
+        if (!$stmt) {
+            die("Erro ao preparar a consulta: " . $this->conn->error);
+        }
+
+        $stmt->bind_param("s", $cpfUsuario);
+
+        if ($stmt->execute()) {
             $result = $stmt->get_result();
 
             if ($result->num_rows > 0) {
-                return "Usuário já possui um registro.";
+                $stmt->close();
+                return "Dados atualizados com sucesso";
             } else {
-                // Insira os dados do usuário
-                $queryinser = "INSERT INTO usuarios (conta, limite, premium, usuario) VALUES (?, ?, ?, ?)";
-                $stmt = $this->conn->prepare($queryinser);
-                $stmt->bind_param("ssss", $tipoConta, $limiteCartao, $tipoCliente, $nomeuser);
-
-                if ($stmt->execute()) {
-                    return "Registrado";
-                } else {
-                    return "Erro ao registrar.";
-                }
+                $stmt->close();
+                return "CPF incorreto.";
             }
         } else {
-            return "Usuário não está logado.";
-        }
+            return "Erro ao executar a consulta";
+        } 
+    }
+    public function configcont($cpfUser, $tipoConta, $limiteCartao, $tipoCliente) {
+       $query = "UPDATE usuarios SET conta = ? , limite = ? , premium = ? WHERE cpf = ? ";
+       $stmt = $this->conn->prepare($query);
+
+       if (!$stmt){
+        die("Erro ao preparar a consulta: " . $this->conn->error);
+       }
+
+       $stmt->bind_param("ssss", $cpfUser, $tipoConta, $limiteCartao, $tipoCliente);
+
+       if ($stmt->execute()){
+        $stmt->close();
+        return "Dados atualizados com sucesso";
+       } else{
+        return "Erro ao atualizar os dados";
+       }
     }
 }
 ?>
