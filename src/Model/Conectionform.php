@@ -23,7 +23,7 @@ class Database {
             die("Erro ao preparar a consulta: " . $this->conn->error);
         }
 
-        $stmt->bind_param("s", $cpfUsuario);
+        $stmt->bind_param("s", $cpfUser);
 
         if ($stmt->execute()) {
             $result = $stmt->get_result();
@@ -47,7 +47,7 @@ class Database {
         die("Erro ao preparar a consulta: " . $this->conn->error);
        }
 
-       $stmt->bind_param("ssss", $cpfUser, $tipoConta, $limiteCartao, $tipoCliente);
+       $stmt->bind_param("ssss", $tipoConta, $limiteCartao, $tipoCliente, $cpfUser);
 
        if ($stmt->execute()){
         $stmt->close();

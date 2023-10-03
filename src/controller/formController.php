@@ -34,7 +34,7 @@ class formController{
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     $formController = new formController();
-    $cpfUser = $_POST['$cpfUser'];
+    $cpfUser = $_POST['cpfUser'];
     $tipoConta = $_POST['tipoConta'];
     $limiteCartao = $_POST['limiteCartao'];
     $tipoCliente = $_POST['tipoCliente'];
