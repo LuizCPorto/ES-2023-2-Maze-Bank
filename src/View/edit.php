@@ -136,11 +136,11 @@ if (!empty($_GET['id'])) {
             </div>
             <div class="form-group">
                 <label for="senha1">Nova Senha:</label>
-                <input type="password" id="senha1" name="senha1" value="<?php echo $senha ?>" required>
+                <input type="text" id="senha1" name="senha1" value="<?php echo $senha ?>" required>
             </div>
             <div class="form-group">
                 <label for="senha2">Confirme a Nova Senha:</label>
-                <input type="password" id="senha2" name="senha2" value="<?php echo $senha2 ?>" required>
+                <input type="text" id="senha2" name="senha2" value="<?php echo $senha2 ?>" required>
             </div>
             <div class="form-group">
                 <label for="tipo">Tipo de Conta:</label>
