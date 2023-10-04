@@ -23,9 +23,9 @@
 
         <span style="color: white;">Cliente premium?</span><br>
         <input type="radio" name="tipoCliente" id="isPremium" value="sim" required>
-        <label for="isPremiun">Sim</label><br>
+        <label for="isPremiun" class="op">Sim</label><br>
         <input type="radio" name="tipoCliente" id="isNotPremium" value="nao" required>
-        <label for="isNotPremiun">Não</label><br>
+        <label for="isNotPremiun" class="op">Não</label><br>
         
         <button type="submit">Confirmar</button>
         <br>

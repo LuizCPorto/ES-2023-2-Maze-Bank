@@ -13,11 +13,14 @@ if(isset($_POST['update']))
     $cpf = $_POST['cpf'];
     $senha = $_POST['senha1'];
     $senha2 = $_POST['senha2'];
+    $conta = $_POST['tipo'];
+    $limite = $_POST['limite'];
+    $premium = $_POST['genero'];
     if($senha != $senha2){
         echo "Senhas não coincidem";
     }
     else{
-        $sqlUpdate = "UPDATE usuarios SET email='$email',usuario='$nome',cpf='$cpf',senha1='$senha',senha2='$senha2' WHERE id_usuario ='$id'";
+        $sqlUpdate = "UPDATE usuarios SET email='$email',usuario='$nome',cpf='$cpf',senha1='$senha',senha2='$senha2',conta='$conta',limite='$limite',premium='$premium' WHERE id_usuario ='$id'";
         $result = $conn->query($sqlUpdate);
     }
 }

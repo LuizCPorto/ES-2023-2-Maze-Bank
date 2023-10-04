@@ -10,7 +10,7 @@ if (!empty($_GET['id'])) {
 
   $sqlSelect = "SELECT * FROM usuarios WHERE id_usuario=$id";
   $result = $conn->query($sqlSelect);
-  
+
   if ($result->num_rows > 0) {
     while ($user_data = mysqli_fetch_assoc(($result))) {
       $nome = $user_data['usuario'];
@@ -18,6 +18,9 @@ if (!empty($_GET['id'])) {
       $cpf = $user_data['cpf'];
       $senha = $user_data['senha1'];
       $senha2 = $user_data['senha2'];
+      $conta = $user_data['conta'];
+      $limite = $user_data['limite'];
+      $premium = $user_data['premium'];
     }
   } else {
     header('Location: crud.php');
@@ -80,6 +83,7 @@ if (!empty($_GET['id'])) {
       background-color: #787475;
       color: white;
       cursor: pointer;
+      margin: 10px;
     }
   </style>
 </head>
@@ -107,6 +111,21 @@ if (!empty($_GET['id'])) {
       <div class="form-group">
         <label for="senha2">Confirme a Nova Senha:</label>
         <input type="text" id="senha2" name="senha2" value="<?php echo $senha2 ?>" required>
+      </div>
+      <div class="form-group">
+        <label for="tipo">Tipo de Conta:</label>
+        <input type="text" id="tipo" name="tipo" value="<?php echo $conta ?>" required>
+      </div>
+      <p class="form-group">Premium:</p>
+      <input type="radio" id="sim" name="genero" value="sim" <?php echo ($premium == 'sim') ? 'checked' : '' ?> require>
+      <label for="sim" class="form-group">Sim</label>
+      <input type="radio" id="nao" name="genero" value="nao" <?php echo ($premium == 'nao') ? 'checked' : '' ?> require>
+      <label for="sim" class="form-group">Não</label>
+      <p></p>
+      <br>
+      <div class="form-group">
+        <label for="limite">Limite:</label>
+        <input type="text" id="limite" name="limite" value="<?php echo $limite ?>" required>
       </div>
       <div class="form-group">
         <input type="hidden" name="id" value="<?php echo $id ?>">
