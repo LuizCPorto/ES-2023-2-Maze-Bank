@@ -15,7 +15,7 @@ if(isset($_POST['update']))
     $senha2 = $_POST['senha2'];
     $conta = $_POST['tipo'];
     $limite = $_POST['limite'];
-    $premium = $_POST['genero'];
+    $premium = $_POST['premium'];
     if($senha != $senha2){
         echo "Senhas não coincidem";
     }
