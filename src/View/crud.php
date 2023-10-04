@@ -36,13 +36,17 @@ $result = $conn->query($sql);
         .btn {
             margin-right: 5px;
         }
+        .title{
+            text-align: center;
+            margin: 30px;
+        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
     <header>
-        <h2>Tela de Administrador</h2>
+        <h2 class="title">Tela de Administrador</h2>
     </header>
     <div class="m-5">
         <table class="table table-bordered table-hover table-bg">
@@ -54,6 +58,9 @@ $result = $conn->query($sql);
                     <th scope="col">CPF</th>
                     <th scope="col">Senha-1</th>
                     <th scope="col">Senha-2</th>
+                    <th scope="col">Conta</th>
+                    <th scope="col">Premium</th>
+                    <th scope="col">Limite</th>
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
@@ -67,6 +74,9 @@ $result = $conn->query($sql);
                     echo "<td>" . $user_data['cpf'] . "</td>";
                     echo "<td>" . $user_data['senha1'] . "</td>";
                     echo "<td>" . $user_data['senha2'] . "</td>";
+                    echo "<td>" . $user_data['conta'] . "</td>";
+                    echo "<td>" . $user_data['premium'] . "</td>";
+                    echo "<td>" . $user_data['limite'] . "</td>";
                     echo "<td>
                         <a class='btn btn-info btn-sm' href='detalhes.php?id={$user_data['id_usuario']}' title='Detalhes'>
                             <img src='https://cdn-icons-png.flaticon.com/512/709/709612.png' width='16' height='16'>
