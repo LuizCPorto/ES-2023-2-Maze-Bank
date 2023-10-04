@@ -21,7 +21,6 @@ if (!empty($_GET['id'])) {
       $conta = $user_data['conta'];
       $premium = $user_data['premium'];
       $limite = $user_data['limite'];
-      $premium = $user_data['premium'];
     }
   } else {
     header('Location: crud.php');
@@ -116,6 +115,8 @@ if (!empty($_GET['id'])) {
             <p><?php echo $conta; ?></p>
             <label for="premium">Premium:</label>
             <p><?php echo $premium ?></p>
+            <label for="premium">Limite:</label>
+            <p><?php echo "R$: $limite" ?></p>
         </div>
         <div class="back-button">
             <a href="javascript:history.go(-1)">Voltar</a>
