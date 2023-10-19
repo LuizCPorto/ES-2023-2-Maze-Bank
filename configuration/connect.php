@@ -1,9 +1,10 @@
 <?php
 
-    define('HOST','localhost');
-    define('DATABASENAME','mazebank');
+    define('HOST','containers-us-west-96.railway.app');
+    define('DATABASENAME','railway');
     define('USER','root');
-    define('PASSWORD','');
+    define('PASSWORD','rA09CY5wO2Bkxy8FFvZV');
+    define('PORT','8044');
 
     class Connect{
         protected $connection;
@@ -16,7 +17,7 @@
         function connectDatabase()
         {
             try{
-                $this->connection = new PDO('mysql:host='.HOST.';dbname='.DATABASENAME,USER,PASSWORD);
+                $this->connection = new PDO('mysql:host='.HOST. ';port='. PORT.';dbname='.DATABASENAME,USER,PASSWORD);
             }
             catch(PDOException $e){
                 echo "Error!".$e->getMessage();
