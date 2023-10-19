@@ -1,32 +1,26 @@
 <?php
-$dbHost = 'Localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mazebank';
-$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+include_once('../../configuration/cfg.php');
 
 if (!empty($_GET['id'])) {
   $id = $_GET['id'];
 
-  $sqlSelect = "SELECT * FROM usuarios WHERE id_usuario=$id";
+  $sqlSelect = "SELECT * FROM usuarios WHERE id=$id";
   $result = $conn->query($sqlSelect);
 
   if ($result->num_rows > 0) {
     while ($user_data = mysqli_fetch_assoc(($result))) {
-      $nome = $user_data['usuario'];
+      $nome = $user_data['nome'];
       $email = $user_data['email'];
       $cpf = $user_data['cpf'];
       $senha = $user_data['senha1'];
       $senha2 = $user_data['senha2'];
-      $conta = $user_data['conta'];
-      $limite = $user_data['limite'];
-      $premium = $user_data['premium'];
     }
   } else {
-    header('Location: crud.php');
+    header('Location: crudIndex.php');
   }
 } else {
-  header('Location: crud.php');
+    header('Location: crudIndex.php');
 }
 ?>
 
@@ -121,7 +115,7 @@ if (!empty($_GET['id'])) {
     <div class="container">
         <h2>Alteração de Dados</h2>
         
-        <form action="../Model/saveEdit.php" method="POST">
+        <form action="../../models/Crud/saveEdit.php" method="POST">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" value="<?php echo $email ?>" required>
@@ -142,7 +136,7 @@ if (!empty($_GET['id'])) {
                 <label for="senha2">Confirme a Nova Senha:</label>
                 <input type="text" id="senha2" name="senha2" value="<?php echo $senha2 ?>" required>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="tipo">Tipo de Conta:</label>
                 <input type="text" id="tipo" name="tipo" value="<?php echo $conta ?>" required>
             </div>
@@ -156,7 +150,7 @@ if (!empty($_GET['id'])) {
             <div class="form-group">
                 <label for="limite">Limite:</label>
                 <input type="text" id="limite" name="limite" value="<?php echo $limite ?>" required>
-            </div>
+            </div> -->
             <div class="form-group">
                 <input type="hidden" name="id" value="<?php echo $id ?>">
                 <input type="submit" name="update" id="update" value="Atualizar">

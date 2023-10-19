@@ -16,7 +16,7 @@ document.querySelector('#btnSignup')
     btnColor.style.left = "110px"
   })
 
-  //LOGIN DE USUÁRIO
+  // LOGIN DE USUÁRIO
 document.getElementById('signin').addEventListener('submit', function (e) {
   e.preventDefault();
 
@@ -30,7 +30,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
 
 
   //REQUISIÇÃO
-  fetch('../controller/LoginController.php', {
+  fetch('../../../MazeBank/controllers/login/Login.php', {
     method: 'POST',
     body: formData
   })
@@ -38,20 +38,43 @@ document.getElementById('signin').addEventListener('submit', function (e) {
     .then(data => {
       console.log(data);
       if(data === "Usuário não encontrado.") {
-        alert("Usuário não encontrado!");
+        Swal.fire({
+          icon: 'error',
+          title: 'Erro',
+          text: 'Usuario nao encontrado.',
+        });
       }
       
       //entra aqui quando for sucesso!
       if(data === "Login feito com sucesso") {
-        alert("Login feito com sucesso");
-        window.location.href = "formularioCliente.php";
+        Swal.fire(
+          'Parabéns!',
+          'Cadastro feito com sucesso!',
+          'success'
+        ).then((result)=>{
+          if(result.isConfirmed){
+            window.location.href = "../../../MazeBank/routes/home.html";
+          }
+        })
       }
       if(data === "admin") {
-        alert("admin");
-        window.location.href = "crud.php";
+        Swal.fire(
+          'Admin!',
+          'Logando com usuario Administrador!',
+          'success'
+        ).then((result)=>{
+          if(result.isConfirmed){
+            window.location.href = "../../../MazeBank/routes/crud/crudIndex.php";
+          }
+        })
+
       }
       if(data === "Senha incorreta.") {
-        alert("Senha incorreta, tente novamente!");
+        Swal.fire(
+          'Erro!',
+          'Senha incorreta!',
+          'error'
+        )
       }
     })
     .catch(error => {
@@ -76,21 +99,33 @@ document.getElementById('signin').addEventListener('submit', function (e) {
     formData.append("senha1",senha1);
     formData.append("senha2",senha2);
 
-    fetch('../controller/RegisterController.php',{
+    fetch('../../../MazeBank/controllers/Cadastro/Cadastro.php',{
       method:'POST',
       body:formData
     })
     .then(response => response.text())
     .then(data => {
-      console.log(data);
+      // console.log(data);
       if(data == "Senhas nao coincidem."){
-        alert("Senhas nao coincidem.");
+        Swal.fire(
+          'Erro!',
+          'Senhas nao coincidem!',
+          'warning'
+        )
       }
       else if(data == "Email ou CPF já cadastrado!"){
-        alert("Email ou CPF já cadastrado!");
+        Swal.fire(
+          'Erro!',
+          'Email ou CPF já cadastrado!',
+          'warning'
+        )
       }
       if(data == "Registro feito com sucesso!") {
-        alert("Registro feito com sucesso!");
+        Swal.fire(
+          'Parabéns!',
+          'Cadastro feito com sucesso!',
+          'success'
+        )
       }
     })
     .catch(error => {
