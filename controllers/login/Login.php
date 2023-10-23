@@ -1,8 +1,7 @@
 <?php
 
-    require __DIR__ . '\..\..\vendor\autoload.php';
+    require __DIR__ . '/../../vendor/autoload.php';
     use Firebase\JWT\JWT;
-
     require_once('../../models/login/login.php');
 
     class loginController{
