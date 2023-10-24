@@ -1,7 +1,2 @@
 /vendor/
-package-lock.json
-package.json
-input.css
-tailwind.config.js
-node_modules
-prettier.config.js
+
