@@ -30,7 +30,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
 
 
   //REQUISIÇÃO
-  fetch('../../controllers/login/Login.php', {
+  fetch('../../../ES-2023-2-Maze-Bank/controllers/login/Login.php', {
     method: 'POST',
     body: formData
   })
@@ -53,7 +53,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
           'success'
         ).then((result)=>{
           if(result.isConfirmed){
-            window.location.href = "../../routes/home.php";
+            window.location.href = "../../../ES-2023-2-Maze-Bank/routes/home.php";
           }
         })
       }
@@ -64,7 +64,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
           'success'
         ).then((result)=>{
           if(result.isConfirmed){
-            window.location.href = "../../../MazeBank/routes/crud/crudIndex.php";
+            window.location.href = "../../../ES-2023-2-Maze-Bank/routes/crud/crudIndex.php";
           }
         })
 
