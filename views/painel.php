@@ -7,6 +7,14 @@
     <title>Painel</title>
   </head>
   <body class="h-screen overflow-y-hidden bg-[#d9d9d9]">
+
+
+    <?php
+      
+    ?>
+
+
+
     <header class="flex w-full justify-between border-b border-black p-5 px-24">
       <img src="./img/logo.webp" alt="logo" class="my-1 w-20" />
 

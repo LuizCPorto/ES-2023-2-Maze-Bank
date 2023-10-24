@@ -1,5 +1,4 @@
 /vendor/
-/vendor/
 package-lock.json
 package.json
 input.css
