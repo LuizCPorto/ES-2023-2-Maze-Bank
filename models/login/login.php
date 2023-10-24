@@ -27,6 +27,7 @@ class LoginModel extends Connect {
                 if ($senha === $senhaArmazenada) {
                     $stmt->closeCursor();
                     session_start();
+                    $_SESSION['nome_do_usuario'] = $nome;
                     return "Login feito com sucesso";
                     header("Location: ../../../../routes/home.html");
                 } else {
