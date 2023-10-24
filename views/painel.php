@@ -35,52 +35,52 @@
           >Nome de usuario</label
         >
 
-        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-user relative top-8 right-40"></i>
 
         <input
           type="text"
           class="mb-8 focus:ring-4 focus:ring-red-500"
           name="Usuario"
           id="name"
-          value="<?php echo $user["nome"];?>"
+          value="<?php echo " " . $user["nome"];?>"
         /><br />
 
         <label for="mail" class="text-xl font-bold text-white">Meu Email</label>
 
-        <i class="fa-solid fa-envelope"></i>
+        <i class="fa-solid fa-envelope relative top-8 right-24"></i>
 
         <input
           type="text"
           class="mb-8 focus:ring-4 focus:ring-red-500"
           name="email"
           id="mail"
-          value="<?php echo $user["email"];?>"
+          value="<?php echo " " . $user["email"];?>"
         /><br />
 
         <label for="cpf" class="text-xl font-bold text-white">Meu CPF</label>
 
-        <i class="fa-solid fa-passport"></i>
+        <i class="fa-solid fa-passport relative top-8 right-[75px]"></i>
 
         <input
           type="text"
           class="mb-8 focus:ring-4 focus:ring-red-500"
           name="cpf"
           id="cpf"
-          value="<?php echo $user["cpf"];?>"
+          value="<?php echo " " . $user["cpf"];?>"
         /><br />
 
         <label for="senha" class="text-xl font-bold text-white"
           >Minha senha</label
         >
 
-        <i class="fa-solid fa-lock"></i>
+        <i class="fa-solid fa-lock  relative top-8 right-[120px]"></i>
 
         <input
           type="password"
           class="mb-8 focus:ring-4 focus:ring-red-500"
           name="senha"
           id="senha"
-          value="<?php echo $user["senha1"];?>"
+          value="<?php echo " " . $user["senha1"];?>"
         /><br />
 
         <button type="submit" class="hover:bg-white">Aplicar</button>

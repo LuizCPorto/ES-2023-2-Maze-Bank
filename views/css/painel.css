@@ -534,6 +534,50 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.relative {
+  position: relative;
+}
+
+.right-20 {
+  right: 5rem;
+}
+
+.right-24 {
+  right: 6rem;
+}
+
+.right-40 {
+  right: 10rem;
+}
+
+.right-\[70px\] {
+  right: 70px;
+}
+
+.top-8 {
+  top: 2rem;
+}
+
+.right-\[75px\] {
+  right: 75px;
+}
+
+.right-36 {
+  right: 9rem;
+}
+
+.right-32 {
+  right: 8rem;
+}
+
+.right-28 {
+  right: 7rem;
+}
+
+.right-\[120px\] {
+  right: 120px;
+}
+
 .m-auto {
   margin: auto;
 }
@@ -571,10 +615,6 @@ video {
 
 .flex {
   display: flex;
-}
-
-.hidden {
-  display: none;
 }
 
 .h-5\/6 {
