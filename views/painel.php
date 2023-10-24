@@ -21,7 +21,7 @@
       <img src="./img/logo.webp" alt="logo" class="my-1 w-20" />
 
       <button class="my-2 rounded-xl bg-red-600 hover:bg-red-700 font-bold text-white">
-        <a href="../routes/home.html" class="mx-4 block h-full w-36 pt-6"
+        <a href="../routes/home.php" class="mx-4 block h-full w-36 pt-6"
           >Voltar para Home</a
         >
       </button>
