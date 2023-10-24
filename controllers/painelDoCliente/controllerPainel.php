@@ -46,5 +46,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $model = new modelPainel();
     $model ->atualizarDadosDoUsuario($antigoCpf, $novoNome, $email, $cpf, $senha);
-    header("Location: ./../../views/painel.php");
+    header("Location: ./../../index.html");
 }
