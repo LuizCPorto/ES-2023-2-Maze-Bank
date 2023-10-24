@@ -30,7 +30,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
 
 
   //REQUISIÇÃO
-  fetch('../../../MazeBank/controllers/login/Login.php', {
+  fetch('../../../ES-2023-2-Maze-Bank/controllers/login/Login.php', {
     method: 'POST',
     body: formData
   })
@@ -53,7 +53,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
           'success'
         ).then((result)=>{
           if(result.isConfirmed){
-            window.location.href = "../../../MazeBank/routes/home.html";
+            window.location.href = "../../../ES-2023-2-Maze-Bank/routes/home.php";
           }
         })
       }
@@ -64,7 +64,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
           'success'
         ).then((result)=>{
           if(result.isConfirmed){
-            window.location.href = "../../../MazeBank/routes/crud/crudIndex.php";
+            window.location.href = "../../../ES-2023-2-Maze-Bank/routes/crud/crudIndex.php";
           }
         })
 
@@ -99,7 +99,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
     formData.append("senha1",senha1);
     formData.append("senha2",senha2);
 
-    fetch('../../../MazeBank/controllers/Cadastro/Cadastro.php',{
+    fetch('../../controllers/Cadastro/Cadastro.php',{
       method:'POST',
       body:formData
     })
