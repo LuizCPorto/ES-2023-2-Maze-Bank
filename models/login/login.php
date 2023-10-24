@@ -29,7 +29,7 @@ class LoginModel extends Connect {
                     session_start();
                     $_SESSION['nome_do_usuario'] = $nome;
                     return "Login feito com sucesso";
-                    header("Location: ../../../../routes/home.html");
+                    header("Location: home.php");
                 } else {
                     $stmt->closeCursor();
                     return "Senha incorreta.";

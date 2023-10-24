@@ -53,7 +53,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
           'success'
         ).then((result)=>{
           if(result.isConfirmed){
-            window.location.href = "../../../MazeBank/routes/home.html";
+            window.location.href = "../../routes/home.php";
           }
         })
       }
