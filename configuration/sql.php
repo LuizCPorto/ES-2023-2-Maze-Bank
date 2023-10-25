@@ -62,4 +62,24 @@ class Connect
             return false; // Ocorreu um erro na consulta
         }
     }
+
+    public static function ConsultarUsuarioPorCPF($cpf)
+{
+    $conexao = new Conexao;
+    $conectado = $conexao->conectarBancoDeDados();
+
+    // Use prepared statements para evitar injeção de SQL
+    $sql = "SELECT id, saldo FROM usuarios WHERE cpf = ?";
+    $stmt = $conectado->prepare($sql);
+    $stmt->bind_param('s', $cpf); // 's' indica que o parâmetro é uma string (CPF)
+
+    if ($stmt->execute()) {
+        $result = $stmt->get_result();
+        return $result->fetch_assoc();
+    } else {
+        return false; // Ocorreu um erro na consulta
+    }
+}
+
+
 }
