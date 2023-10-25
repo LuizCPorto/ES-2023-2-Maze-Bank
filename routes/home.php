@@ -1,11 +1,11 @@
 <?php
 session_start();
-
 if (!isset($_SESSION['nome_do_usuario']) || !isset($_COOKIE["jwt_token"])) {
     header('Location: ./../index.html');
 } 
 
 $nome_do_usuario = $_SESSION['nome_do_usuario'];
+ $saldo = $_SESSION['saldo'];
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +33,8 @@ $nome_do_usuario = $_SESSION['nome_do_usuario'];
         <ul>
             <li><a class="btn btn-dark" href="#">Início</a></li>
             <li><a class="btn btn-dark" href="../routes/conta.html">Conta</a></li>
-            <li><a class="btn btn-dark" href="../routes/transferencias.html">Transferências</a></li>
+            <!-- Modify the Transferências link to include user_id parameter -->
+            <li><a class="btn btn-dark" href="../routes/transferencias.php">Transferências</a></li>
             <li><a class="btn btn-dark" href="../routes/configuracoes.html">Configurações</a></li>
             <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li>
             
@@ -46,9 +47,11 @@ $nome_do_usuario = $_SESSION['nome_do_usuario'];
     <div class="container">
         <h2>Bem-vindo ao MazeBank</h2>
         <p>Somos o banco que você pode confiar para todas as suas necessidades financeiras. Oferecemos uma ampla gama de serviços bancários para ajudar você a atingir seus objetivos financeiros.</p>
-        
+
         <div id="balance-info">
-            <p id="balance"><?php echo $nome_do_usuario; ?></p>
+
+          <p id="balance">Saldo: R$ <?php echo $saldo; ?></p>
+
             <button class="btn btn-outline-danger balance-toggle" onclick="toggleBalance()">Ocultar Saldo</button>
         </div>
     </div>
