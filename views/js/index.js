@@ -99,7 +99,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
     formData.append("senha1",senha1);
     formData.append("senha2",senha2);
 
-    fetch('../../controllers/Cadastro/Cadastro.php',{
+    fetch('../../../ES-2023-2-Maze-Bank/controllers/Cadastro/Cadastro.php',{
       method:'POST',
       body:formData
     })
