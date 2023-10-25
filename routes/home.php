@@ -6,6 +6,7 @@ if (isset($_SESSION['nome_do_usuario'])) {
 } else {
     $nome_do_usuario = "Usuário não está logado!";
 }
+    $saldo = $_SESSION['saldo'];
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,8 @@ if (isset($_SESSION['nome_do_usuario'])) {
         <ul>
             <li><a class="btn btn-dark" href="#">Início</a></li>
             <li><a class="btn btn-dark" href="../routes/conta.html">Conta</a></li>
-            <li><a class="btn btn-dark" href="../routes/transferencias.html">Transferências</a></li>
+            <!-- Modify the Transferências link to include user_id parameter -->
+            <li><a class="btn btn-dark" href="../routes/transferencias.php">Transferências</a></li>
             <li><a class="btn btn-dark" href="../routes/configuracoes.html">Configurações</a></li>
             <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li>
         </ul>
@@ -41,9 +43,9 @@ if (isset($_SESSION['nome_do_usuario'])) {
     <div class="container">
         <h2>Bem-vindo ao MazeBank</h2>
         <p>Somos o banco que você pode confiar para todas as suas necessidades financeiras. Oferecemos uma ampla gama de serviços bancários para ajudar você a atingir seus objetivos financeiros.</p>
-        
+
         <div id="balance-info">
-            <p id="balance">Saldo: R$ 10.000,00</p>
+          <p id="balance">Saldo: R$ <?php echo $saldo; ?></p>
             <button class="btn btn-outline-danger balance-toggle" onclick="toggleBalance()">Ocultar Saldo</button>
         </div>
     </div>
