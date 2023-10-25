@@ -1,10 +1,11 @@
 <?php
   session_start();
 
-  if (isset($_SESSION['nome_do_usuario'])) {
+  if (!isset($_SESSION['nome_do_usuario']) || !isset($_COOKIE["jwt_token"])) {
       $nome_do_usuario = $_SESSION['nome_do_usuario'];
+      header('Location: ./../index.html');
   } else {
-      $nome_do_usuario = "Usuário não está logado!";
+      $nome_do_usuario = $_SESSION['nome_do_usuario'];
   }
 ?>
 
