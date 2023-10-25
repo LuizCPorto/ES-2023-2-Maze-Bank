@@ -62,7 +62,7 @@
           class="mb-8 focus:ring-4 focus:ring-red-500"
           name="Usuario"
           id="name"
-          value="<?php echo " " . $user["nome"];?>"
+          value="<?php echo $user["nome"];?>"
         /><br />
 
         <label for="mail" class="text-xl font-bold text-white">Meu Email</label>
@@ -74,7 +74,7 @@
           class="mb-8 focus:ring-4 focus:ring-red-500"
           name="email"
           id="mail"
-          value="<?php echo " " . $user["email"];?>"
+          value="<?php echo $user["email"];?>"
         /><br />
 
         <label for="cpf" class="text-xl font-bold text-white">Meu CPF</label>
@@ -86,7 +86,7 @@
           class="mb-8 focus:ring-4 focus:ring-red-500"
           name="cpf"
           id="cpf"
-          value="<?php echo " " . $user["cpf"];?>"
+          value="<?php echo $user["cpf"];?>"
         /><br />
 
         <label for="senha" class="text-xl font-bold text-white"
@@ -100,7 +100,7 @@
           class="mb-8 focus:ring-4 focus:ring-red-500"
           name="senha"
           id="senha"
-          value="<?php echo " " . $user["senha1"];?>"
+          value="<?php echo $user["senha1"];?>"
         /><br />
 
         <button type="submit" class="hover:bg-white">Aplicar</button>
