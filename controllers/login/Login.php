@@ -1,5 +1,6 @@
 <?php
 
+
     require __DIR__ . '/../../vendor/autoload.php';
     use Firebase\JWT\JWT;
     require_once('../../models/login/login.php');
@@ -25,16 +26,16 @@
             else{
                 $resultado = $this->model->fazerLogin($nome,$senha);
                 
+
                 $payload = [
                     "exp" => time() + 3600,
                     "iat" => time(),
                     "email" => $nome,
-                ];
-                
-                $jwtKey = "62486684269Pp2023";
-                $token = JWT::encode($payload, $jwtKey, "HS256");
+                ];  
+                // $jwtKey = "62486684269Pp2023";
+                // $token = JWT::encode($payload, $jwtKey, "HS256");
 
-                setcookie('jwt_token', $token, time() + 3600, '/');
+                // setcookie('jwt_token', $token, time() + 3600, '/');
                 echo $resultado;
             }
         }
