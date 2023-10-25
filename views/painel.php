@@ -81,17 +81,7 @@
           value="<?php echo $user["email"];?>"
         /><br />
 
-        <label for="cpf" class="text-xl font-bold text-white">Meu CPF</label>
 
-        <i class="fa-solid fa-passport relative top-8 right-[75px]"></i>
-
-        <input
-          type="text"
-          class="mb-8 focus:ring-4 focus:ring-red-500"
-          name="cpf"
-          id="cpf"
-          value="<?php echo $user["cpf"];?>"
-        /><br />
 
         <label for="senha" class="text-xl font-bold text-white"
           >Minha senha</label
@@ -106,6 +96,21 @@
           id="senha"
           value="<?php echo $user["senha1"];?>"
         /><br />
+
+        <!-- <label for="cpf" class="text-xl font-bold text-white">Meu CPF</label>
+
+        <i class="fa-solid fa-passport relative top-8 right-[75px]"></i> -->
+
+        <input
+          type="text"
+          class="mb-8 focus:ring-4 focus:ring-red-500 hidden"
+          name="cpf"
+          id="cpf"
+          style="display: none;"
+          value="<?php echo $user["cpf"];?>"
+        /><br />
+
+
 
         <button type="submit" class="hover:bg-white">Aplicar</button>
       </form>

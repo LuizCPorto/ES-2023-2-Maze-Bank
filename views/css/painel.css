@@ -558,10 +558,6 @@ video {
   top: 2rem;
 }
 
-.m-auto {
-  margin: auto;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -569,22 +565,6 @@ video {
 
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.mb-\[2\.5rem\] {
-  margin-bottom: 2.5rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
 }
 
 .mb-2 {
@@ -595,36 +575,16 @@ video {
   margin-bottom: 0.75rem;
 }
 
-.mt-28 {
-  margin-top: 7rem;
-}
-
-.mt-96 {
-  margin-top: 24rem;
-}
-
-.mt-36 {
-  margin-top: 9rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .mt-5 {
   margin-top: 1.25rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
-.mt-3 {
-  margin-top: 0.75rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
+.hidden {
+  display: none;
 }
 
 .h-5\/6 {
@@ -643,27 +603,8 @@ video {
   width: 66.666667%;
 }
 
-.overflow-y-hidden {
-  overflow-y: hidden;
-}
-
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.bg-\[\#d9d9d9\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
-}
-
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#ba2e29\] {
@@ -671,16 +612,19 @@ video {
   background-color: rgb(186 46 41 / var(--tw-bg-opacity));
 }
 
-.pt-24 {
-  padding-top: 6rem;
+.bg-\[\#d9d9d9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 217 217 / var(--tw-bg-opacity));
 }
 
-.pt-12 {
-  padding-top: 3rem;
+.bg-yellow-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(133 77 14 / var(--tw-bg-opacity));
 }
 
-.pt-14 {
-  padding-top: 3.5rem;
+.bg-red-950 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(69 10 10 / var(--tw-bg-opacity));
 }
 
 .pt-16 {
@@ -692,23 +636,13 @@ video {
   line-height: 1;
 }
 
+.text-\[2\.5rem\] {
+  font-size: 2.5rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
-.text-\[2\.5rem\] {
-  font-size: 2.5rem;
 }
 
 .font-bold {
