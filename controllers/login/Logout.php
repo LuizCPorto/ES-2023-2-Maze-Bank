@@ -1,6 +1,6 @@
 <?php
     session_start();
     session_destroy();
-    header('Location: ./../index.html');
+    header('Location: ../../../../../ES-2023-2-Maze-Bank/index.html');
     exit;
 ?>
