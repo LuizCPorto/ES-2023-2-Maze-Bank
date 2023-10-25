@@ -33,7 +33,7 @@
             <h1 class="text-[2.5rem] mb-2">MazeBank</h1>
             <p class="mb-3">Seu Banco de Confiança</p>
             <div class="user-info">
-                <span><?php echo $nome_do_usuario; ?></span>
+                <span><?php echo "Bem-vindo $nome_do_usuario"; ?></span>
             </div>
     </header>
 
@@ -41,9 +41,12 @@
         <ul>
             <li><a class="btn btn-dark" href="../routes/home.php">Início</a></li>
             <!-- <li><a class="btn btn-dark" href="../routes/conta.html">Conta</a></li> -->
-            <li><a class="btn btn-dark" href="../routes/transferencias.html">Transferências</a></li>
+            <li><a class="btn btn-dark" href="../routes/transferencias.php">Transferências</a></li>
             <!-- <li><a class="btn btn-dark" href="../routes/configuracoes.html">Configurações</a></li> -->
             <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li>
+            <?php if (isset($_SESSION['nome_do_usuario'])) : ?>
+                <li><a class="btn btn-warning" href="../controllers/login/Logout.php">Sair</a></li>
+            <?php endif; ?>
         </ul>
     </nav>
 

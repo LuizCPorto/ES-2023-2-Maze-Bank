@@ -25,7 +25,7 @@ $nome_do_usuario = $_SESSION['nome_do_usuario'];
         <h1>MazeBank</h1>
         <p>Seu Banco de Confiança</p>
         <div class="user-info">
-            <span><?php echo $nome_do_usuario; ?></span>
+            <span><?php echo "Bem-vindo $nome_do_usuario"; ?></span>
         </div>
     </header>
 
