@@ -17,7 +17,7 @@ $Connect = new Connect;
 $resultado = null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $recipient_id = $_POST['recipient-id'];
+    $recipient_cpf = $_POST['recipient-cpf'];
     $transfer_amount = floatval(str_replace(',', '.', $_POST['transfer-amount'])); // Convert to float and handle possible comma as decimal separator
 
     $sender_balance = $Connect->ConsultarSaldo($user_id);
@@ -25,34 +25,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($sender_balance !== false) { // Verifique se a consulta foi bem-sucedida
         $sender_balance = floatval($sender_balance); // Convert to float
 
-        if ($sender_balance >= $transfer_amount) {
-            $recipient_balance = $Connect->ConsultarSaldo($recipient_id);
+        // Realize uma consulta SQL para encontrar o destinatário com base no CPF
+        $recipient = $Connect->ConsultarUsuarioPorCPF($recipient_cpf);
 
-            if ($recipient_balance !== false) { // Verifique se a consulta foi bem-sucedida
-                $recipient_balance = floatval($recipient_balance); // Convert to float
+        if ($recipient) {
+            $recipient_id = $recipient['id'];
+            $recipient_balance = floatval($recipient['saldo']); // Convert to float
 
+            if ($sender_balance >= $transfer_amount) {
                 $new_sender_balance = $sender_balance - $transfer_amount;
                 $Connect->AlterarSaldo($user_id, $new_sender_balance);
                 $_SESSION['saldo'] = $new_sender_balance;
+
                 $new_recipient_balance = $recipient_balance + $transfer_amount;
                 $Connect->AlterarSaldo($recipient_id, $new_recipient_balance);
 
-
                 $transfer_message = "Transferência de $transfer_amount R$ realizada com sucesso.";
             } else {
-                $transfer_message = "Conta do destinatário não encontrada.";
+                $transfer_message = "Saldo insuficiente para a transferência.";
             }
         } else {
-            $transfer_message = "Saldo insuficiente para a transferência.";
+            $transfer_message = "Destinatário com o CPF $recipient_cpf não encontrado.";
         }
     } else {
         $transfer_message = "Erro ao consultar saldo do remetente.";
     }
 }
 
-$users_result = $Connect->ConsultarUsuariosExceto($user_id);
+//$users_result = $Connect->ConsultarUsuariosExceto($user_id);
 ?>
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -86,17 +87,8 @@ $users_result = $Connect->ConsultarUsuariosExceto($user_id);
     <div class="container">
         <h2>Transferência</h2>
         <form id="transfer-money-form" method="POST" action="transferencias.php?user_id=<?php echo $user_id; ?>">
-            <label for="recipient-id">Destinatário:</label>
-            <select id="recipient-id" name="recipient-id" required>
-                <option value="" disabled selected>Selecione o destinatário</option>
-                <?php
-                if ($users_result) {
-                    foreach ($users_result as $row) {
-                        echo "<option value='" . $row['id'] . "'>" . $row['nome'] . "</option>";
-                    }
-                }
-                ?>
-            </select>
+            <label for="recipient-cpf">CPF do Destinatário:</label>
+            <input type="text" id="recipient-cpf" name="recipient-cpf" required>
             <br>
 
             <label for="transfer-amount">Valor da Transferência (R$):</label>
@@ -120,9 +112,3 @@ $users_result = $Connect->ConsultarUsuariosExceto($user_id);
 
     <script>
         function goBack() {
-            // You can navigate back to the previous page using JavaScript.
-            window.history.back();
-        }
-    </script>
-</body>
-</html>
