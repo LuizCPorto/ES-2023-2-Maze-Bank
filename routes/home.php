@@ -34,6 +34,7 @@ if (isset($_SESSION['nome_do_usuario'])) {
             <li><a class="btn btn-dark" href="../routes/conta.html">Conta</a></li>
             <li><a class="btn btn-dark" href="../routes/transferencias.html">Transferências</a></li>
             <li><a class="btn btn-dark" href="../routes/configuracoes.html">Configurações</a></li>
+            <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li>
         </ul>
     </nav>
 

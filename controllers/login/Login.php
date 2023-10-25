@@ -1,8 +1,8 @@
 <?php
 
-    // require __DIR__ . '\..\..\vendor\autoload.php';
-    // use Firebase\JWT\JWT;
 
+    require __DIR__ . '/../../vendor/autoload.php';
+    use Firebase\JWT\JWT;
     require_once('../../models/login/login.php');
 
     class loginController{
@@ -26,12 +26,12 @@
             else{
                 $resultado = $this->model->fazerLogin($nome,$senha);
                 
-                // $payload = [
-                //     "exp" => time() + 3600,
-                //     "iat" => time(),
-                //     "email" => $nome,
-                // ];
-                
+
+                $payload = [
+                    "exp" => time() + 3600,
+                    "iat" => time(),
+                    "email" => $nome,
+                ];  
                 // $jwtKey = "62486684269Pp2023";
                 // $token = JWT::encode($payload, $jwtKey, "HS256");
 
