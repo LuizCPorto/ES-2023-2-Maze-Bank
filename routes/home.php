@@ -36,7 +36,7 @@ $nome_do_usuario = $_SESSION['nome_do_usuario'];
             <!-- Modify the Transferências link to include user_id parameter -->
             <li><a class="btn btn-dark" href="../routes/transferencias.php">Transferências</a></li>
             <li><a class="btn btn-dark" href="../views/deposito.php">Deposito</a></li>
-            <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li>
+            <!-- <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li> -->
             
             <?php if (isset($_SESSION['nome_do_usuario'])) : ?>
                 <li><a class="btn btn-warning" href="../controllers/login/Logout.php">Sair</a></li>

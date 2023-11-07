@@ -80,8 +80,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <li><a class="btn btn-dark" href="home.php">Início</a></li>
             <!-- <li><a class="btn btn-dark" href="../routes/conta.html">Conta</a></li> -->
             <li><a class="btn btn-dark" href="../routes/transferencias.php?user_id=<?php echo $user_id; ?>">Transferências</a></li>
-            <li><a class="btn btn-dark" href="../routes/configuracoes.html">Deposito</a></li>
-            <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li>
+            <li><a class="btn btn-dark" href="../views/deposito.php">Deposito</a></li>
+            <!-- <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li> -->
             <?php if (isset($_SESSION['nome_do_usuario'])) : ?>
                 <li><a class="btn btn-warning" href="../controllers/login/Logout.php">Sair</a></li>
             <?php endif; ?>

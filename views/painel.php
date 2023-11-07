@@ -44,7 +44,7 @@
             <!-- <li><a class="btn btn-dark" href="../routes/conta.html">Conta</a></li> -->
             <li><a class="btn btn-dark" href="../routes/transferencias.php">Transferências</a></li>
             <li><a class="btn btn-dark" href="../routes/configuracoes.html">Deposito</a></li>
-            <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li>
+            <!-- <li><a class="btn btn-dark" href="../views/painel.php">Ajustes</a></li> -->
             <?php if (isset($_SESSION['nome_do_usuario'])) : ?>
                 <li><a class="btn btn-warning" href="../controllers/login/Logout.php">Sair</a></li>
             <?php endif; ?>

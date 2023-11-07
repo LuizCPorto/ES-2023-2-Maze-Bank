@@ -40,7 +40,7 @@ require_once '../configuration/cfg.php';
             <!-- <li><a class="btn btn-dark" href="../routes/conta.html">Conta</a></li> -->
             <li><a class="btn btn-dark" href="../routes/transferencias.php?user_id=<?php echo $user_id; ?>">Transferências</a></li>
             <li><a class="btn btn-dark">Deposito</a></li>
-            <li><a class="btn btn-dark" href="painel.php">Ajustes</a></li>
+            <!-- <li><a class="btn btn-dark" href="painel.php">Ajustes</a></li> -->
             <?php if (isset($_SESSION['nome_do_usuario'])) : ?>
                 <li><a class="btn btn-warning" href="../controllers/login/Logout.php">Sair</a></li>
             <?php endif; ?>
