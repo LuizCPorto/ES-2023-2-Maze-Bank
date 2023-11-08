@@ -459,6 +459,17 @@ Eu como usuario, cadastrado, logado e sem debitos de emprestimos, quero fazer um
 # Protótipo 
 ![Tela extrato](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/e991998d-d12b-4fb4-8c33-e3ba74d348c8)
 
+## *US-2.14 Depositar dinheiro
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como usuario, gostaria poder depositar dinheiro na minha conta, ou na conta de outros usuários.
+
+# Protótipo 
+![Deposito](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/5d51ff99-6725-4053-8386-8d4eaa4305b8)
+
 
 
 
