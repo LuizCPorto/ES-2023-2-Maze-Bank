@@ -310,7 +310,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 Ã
 
 
 
-## *RF-1.6 Suporte ao cliente 
+## *US-1.6 Suporte ao cliente 
 
 # User Stroy 
 
@@ -323,7 +323,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 Ã
 ![Prototipos_page-0001](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/101116408/24b0ab8f-d9b0-45dc-94e1-d82392fb13db)
 
 
-## *RF-1.7 Extrato
+## *US-1.7 Extrato
 
 # User Stroy 
 
