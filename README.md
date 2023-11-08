@@ -358,7 +358,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 √
 
 # Prot√≥tipo 
 
-![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/f4cbdefa-34fc-46f3-9aa3-ad830c26e831)
+![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/b96a30f3-a35d-4866-a605-29f9462eaec1)
+
 
 
 
