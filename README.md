@@ -329,7 +329,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 |User Story 
 |---------------------------------------------------
-|Eu como cliente, desejo ter todo o suporte necessário, desde de antes da criação da conta até o encerramento dela.
+|Eu como usuário, desejo poder acompanhar todos os meus gastos pelo meu extrato.
 
 # Protótipo 
 
@@ -345,8 +345,9 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 # Protótipo 
 
-![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/fb4e9df3-0582-4312-84e5-7e75d087966f)
-![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/b317b2aa-aa90-46bf-9c0b-318b62b0de38)
+![Solicitar Cartao](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/35ccf76d-cff6-4836-89b2-234f4a4558d7)
+![Aprovação do Cartão](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/d2a38568-ee9b-4de1-9169-4540e3dbfcc6)
+
 
 ## *US-1.9 Fechar Conta
 
@@ -358,7 +359,8 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 # Protótipo 
 
-![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/b96a30f3-a35d-4866-a605-29f9462eaec1)
+![Apagar Conta](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/05cdf529-3822-43ca-a0de-07deb3a2dd0f)
+
 
 
 
