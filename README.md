@@ -363,6 +363,34 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 
 
+## *US-1.10 Pedir Emprestimo 
 
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+Eu como usuario, cadastrado, logado e sem debitos de emprestimos, quero fazer um emprestimo no banco. Para isso preciso ir à aba de emprestimos e selecionar a opção de pedir emprestimo. Apos isso devo colocar o valor do emprestimo e clicar no botão de confirmar.
+
+# Protótipo 
+
+![pagarEmprestimo](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/f2356257-9d0c-4be6-a0e3-f45fc31bd2c7)
+
+
+
+## *US-1.11 Pagar Emprestimo
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como usuario, cadastrado e logado, quero fazer o pgamento dos emprestimos no banco. Para isso preciso ir à aba de emprestimos e selecionar a opção de pagar emprestimo. Apos isso, devo informar a quantidade a ser paga e depois confirmar clicando no botão "Confirmar".
+
+# Protótipo 
+
+![pedirEmprestimo](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/0283b7fe-9462-462c-8a03-204e674476d2)
+
+## Tela de escolha
+
+![Emprestimo](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/0cbfe988-177b-4a87-b343-3ec08605e984)
 
 
