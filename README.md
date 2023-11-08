@@ -1,4 +1,4 @@
-# Engenharia de software-2023.2 | Universidade Federal do Tocantins - Palmas, 2023
+![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/101116408/99640385-e96d-46aa-865e-4d55a350a60c)# Engenharia de software-2023.2 | Universidade Federal do Tocantins - Palmas, 2023
 # Maze-Bank
 
 ## Introdução
@@ -306,3 +306,32 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 
 ![RF-1 5 Consultar Saldo (1)](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/020fa71c-0709-40a3-a9ab-5e01a8b95077)
+
+
+
+
+## *RF-1.6 Suporte ao cliente 
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como cliente, desejo ter todo o suporte necessário, desde de antes da criação da conta até o encerramento dela.
+
+# Protótipo 
+
+![Prototipos_page-0001](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/101116408/24b0ab8f-d9b0-45dc-94e1-d82392fb13db)
+
+
+## *RF-1.7 Extrato
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como cliente, desejo ter todo o suporte necessário, desde de antes da criação da conta até o encerramento dela.
+
+# Protótipo 
+
+![Prototipos_page-0002](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/101116408/cff642b4-2f24-498d-8941-044819c61f8b)
+
