@@ -355,7 +355,7 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 |User Story 
 |---------------------------------------------------
-|Eu como cliente, desejo ter o poder de fechar conta, para caso o banco não atenta minhas espectativas.
+|Eu como cliente, desejo ter o poder de fechar conta, para caso o banco não atenta minhas expectativas.
 
 # Protótipo 
 
