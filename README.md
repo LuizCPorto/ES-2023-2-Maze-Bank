@@ -335,3 +335,31 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 ![Prototipos_page-0002](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/101116408/cff642b4-2f24-498d-8941-044819c61f8b)
 
+## *US-1.8 Solicitar Cartão
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como cliente, desejo poder pedir um cartão, para fazer compras com crédito e débito.
+
+# Protótipo 
+
+![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/fb4e9df3-0582-4312-84e5-7e75d087966f)
+![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/b317b2aa-aa90-46bf-9c0b-318b62b0de38)
+
+## *US-1.9 Fechar Conta
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como cliente, desejo ter o poder de fechar conta, para caso o banco não atenta minhas espectativas.
+
+# Protótipo 
+
+![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/f4cbdefa-34fc-46f3-9aa3-ad830c26e831)
+
+
+
+
