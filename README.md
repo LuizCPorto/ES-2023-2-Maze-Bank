@@ -1,4 +1,4 @@
-![image](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/101116408/99640385-e96d-46aa-865e-4d55a350a60c)# Engenharia de software-2023.2 | Universidade Federal do Tocantins - Palmas, 2023
+# Engenharia de software-2023.2 | Universidade Federal do Tocantins - Palmas, 2023
 # Maze-Bank
 
 ## Introdução
