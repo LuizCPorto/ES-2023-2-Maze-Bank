@@ -120,6 +120,11 @@ input[type="text"], input[type="password"] {
   background: #ffffff;
 }
 
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #660a07d0; /* Altere a cor desejada aqui */
+}
+
 button[type="submit"] {
   background: #ffffff;
   color: rgb(0, 0, 0);
