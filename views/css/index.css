@@ -122,7 +122,7 @@ input[type="text"], input[type="password"] {
 
 input[type="text"]::placeholder,
 input[type="password"]::placeholder {
-  color: #660a07d0; /* Altere a cor desejada aqui */
+  color: #660a07d0; 
 }
 
 button[type="submit"] {
