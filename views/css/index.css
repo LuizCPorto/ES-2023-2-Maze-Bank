@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
 html, body {
-  background-color: #cbc8c8; 
+  background-color: #ffffff; 
   margin: 0;
   padding: 0;
   height: 100%;
@@ -15,6 +15,16 @@ html, body {
 .no-underline {
   color: #ffffff; /* Cor branca */
 }
+
+.red {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 80px; /* ou a largura desejada para a borda vermelha */
+  background-color: #660A07;
+}
+
 
 .login-esquerda{
   width: 50vw;
@@ -50,20 +60,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  overflow: hidden;
 }
 
 .container {
-  background-color: rgb(185, 26, 26);
+  background-color: #660A07;
   padding: 6px;
   width: 350px;
-  height: 600px;
+  height: 580px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: 0 0 20px 0 #c7c6c6;
+  box-shadow: 0 0 20px 0 #ffffff;
   margin-right: 60px;
 }
 
@@ -94,7 +105,7 @@ form {
   position: absolute;
   width: 118px;
   height: 100%;
-  background: linear-gradient(to right, #c7c6c6, #c7c6c6);
+  background: linear-gradient(to right, #ffffff, #ffffff);
   border-radius: 30px;
   transition: .3s;
 }
@@ -106,11 +117,16 @@ input[type="text"], input[type="password"] {
   padding: 8px 0 8px 35px;
   outline: none;
   width: 100%;
-  background: #c7c6c6;
+  background: #ffffff;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+  color: #660a07d0; 
 }
 
 button[type="submit"] {
-  background: #c7c6c6;
+  background: #ffffff;
   color: rgb(0, 0, 0);
   border-radius: 30px;
   width: 100%;
