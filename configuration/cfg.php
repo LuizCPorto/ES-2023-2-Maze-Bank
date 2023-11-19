@@ -1,8 +1,8 @@
 <?php
-$dbHost = 'containers-us-west-96.railway.app';
+$dbHost = 'monorail.proxy.rlwy.net';
 $dbUsername = 'root';
-$dbPassword = 'rA09CY5wO2Bkxy8FFvZV';
+$dbPassword = 'a31BEc6fbFBF3EBb3b1f-6dc32ge-CB5';
 $dbName = 'railway';
-$PORT = "8044";
+$PORT = "16613";
 $conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName,$PORT);
 ?>
