@@ -7,10 +7,15 @@ class LoginModel extends Connect {
     }
 
     public function fazerLogin($nome, $senha) {
-        $query = "SELECT senha1, id, saldo FROM usuarios WHERE nome = :nome";
-
+        $query = "SELECT senha1, id FROM usuarios WHERE nome = :nome";
+        $sqlsaldo = "SELECT conta.saldo FROM usuarios JOIN conta ON usuarios.id = conta.id_usuario WHERE usuarios.id = :ids";
+        
+        $saldostmt = $this->connection->prepare($sqlsaldo);
         $stmt = $this->connection->prepare($query);
 
+        if (!$saldostmt) {
+            die("Erro ao preparar a consulta: " . print_r($this->connection->errorInfo(), true));
+        }
         if (!$stmt) {
             die("Erro ao preparar a consulta: " . print_r($this->connection->errorInfo(), true));
         }
@@ -22,11 +27,17 @@ class LoginModel extends Connect {
 
             if ($result) {
                 $senhaArmazenada = $result["senha1"];
+                $ids = $result["id"];
+                $saldostmt->bindParam(':ids', $ids, PDO::PARAM_STR);
 
+                $saldostmt->execute();
+                $resultSaldo = $saldostmt->fetch(PDO::FETCH_ASSOC);
                 if ($senha === $senhaArmazenada) {
                     $user_id = $result["id"];
-                    $saldo = floatval($result["saldo"]); // Converte o saldo para float
+                    $saldo = floatval($resultSaldo["saldo"]); // Converte o saldo para float
                     $stmt->closeCursor();
+                    $saldostmt->closeCursor();
+                    
                     session_start();
                     $_SESSION['nome_do_usuario'] = $nome;
                     $_SESSION['id'] = $user_id;
@@ -35,6 +46,7 @@ class LoginModel extends Connect {
                     header("Location: home.php");
                 } else {
                     $stmt->closeCursor();
+                    $saldostmt->closeCursor();
                     return "Senha incorreta.";
                 }
             } else {

@@ -8,9 +8,9 @@ class Conexao
 {
     function conectarBancoDeDados()
     {
-        $dbhost = 'containers-us-west-96.railway.app:8044';
+        $dbhost = 'monorail.proxy.rlwy.net';
         $dbUsername = 'root';
-        $dbPassword = 'rA09CY5wO2Bkxy8FFvZV';
+        $dbPassword = 'a31BEc6fbFBF3EBb3b1f-6dc32ge-CB5';
         $dbName = 'railway';
 
         $conexao = new mysqli($dbhost, $dbUsername, $dbPassword, $dbName);

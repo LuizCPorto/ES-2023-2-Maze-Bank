@@ -1,10 +1,10 @@
 <?php
 
-    define('HOST','containers-us-west-96.railway.app');
+    define('HOST','monorail.proxy.rlwy.net');
     define('DATABASENAME','railway');
     define('USER','root');
-    define('PASSWORD','rA09CY5wO2Bkxy8FFvZV');
-    define('PORT','8044');
+    define('PASSWORD','a31BEc6fbFBF3EBb3b1f-6dc32ge-CB5');
+    define('PORT','16613');
 
     class Connect{
         protected $connection;
