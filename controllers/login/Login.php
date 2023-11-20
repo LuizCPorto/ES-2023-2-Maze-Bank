@@ -14,23 +14,23 @@
             $this->model = new LoginModel();
         }
 
-        public function realizarLogin($nome,$senha){
-            if (empty($nome) || empty($senha)) {
+        public function realizarLogin($cpf,$senha){
+            if (empty($cpf) || empty($senha)) {
                 return "Por favor, preencha todos os campos.";
             }
-            if($nome == 'admin' and $senha == 'admin'){
-                return 'admin';
+            if($cpf == '007' and $senha == 'admin'){
+                return '007';
                 header('Location: ../../../../routes/crud/crudIndex.php');
                 exit;
             }
             else{
-                $resultado = $this->model->fazerLogin($nome,$senha);
+                $resultado = $this->model->fazerLogin($cpf,$senha);
                 
 
                 $payload = [
                     "exp" => time() + 3600,
                     "iat" => time(),
-                    "email" => $nome,
+                    "email" => $cpf,
                 ];  
                 $jwtKey = "62486684269Pp2023";
                 $token = JWT::encode($payload, $jwtKey, "HS256");
@@ -42,9 +42,9 @@
     }
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $loginController = new loginController();
-    $nome = $_POST['nomeUsuario'];
+    $cpf = $_POST['cpfUsuario'];
     $senha = $_POST['senha'];
-    $resultadoLogin = $loginController->realizarLogin($nome, $senha);
+    $resultadoLogin = $loginController->realizarLogin($cpf, $senha);
     echo $resultadoLogin;
 }
 ?>
