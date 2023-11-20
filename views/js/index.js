@@ -57,7 +57,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
           }
         })
       }
-      if(data === "admin") {
+      if(data === "007") {
         Swal.fire(
           'Admin!',
           'Logando com usuario Administrador!',

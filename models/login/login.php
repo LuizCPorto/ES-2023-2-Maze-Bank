@@ -44,7 +44,7 @@ class LoginModel extends Connect {
                     $_SESSION['id'] = $user_id;
                     $_SESSION['saldo'] = $saldo;
                     return "Login feito com sucesso";
-                    header("Location: home.php");
+                    // header("Location: home.php");
                 } else {
                     $stmt->closeCursor();
                     $saldostmt->closeCursor();
