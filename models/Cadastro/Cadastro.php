@@ -9,7 +9,8 @@ class CadastroModel extends Connect{
     }
 
     public function cadastrar($nome,$email,$cpf,$senha1,$senha2){
-        $query = "INSERT INTO usuarios (nome, email, cpf, senha1, senha2) VALUES ('$nome', '$email', '$cpf', '$senha1', '$senha2')";
+        $query = "INSERT INTO usuarios (nome, email, cpf, senha1, senha2) VALUES ('$nome', '$email', '$cpf', '$senha1', '$senha2');
+        INSERT INTO conta (id_usuario) VALUES (LAST_INSERT_ID());";
         $queryBusca = "SELECT cpf,email FROM usuarios WHERE cpf = '$cpf' OR email = '$email'";
 
         $buscas = $this->connection->prepare($queryBusca);

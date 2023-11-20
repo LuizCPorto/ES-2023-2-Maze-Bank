@@ -1,0 +1,88 @@
+html, body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opc1,
+.opc2,
+.opc3,
+.opc4 {
+    width: 94vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    margin-bottom: 10px;
+}
+
+.opc1 p,
+.opc2 p,
+.opc3 p,
+.opc4 p {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave para a mudança de opacidade */
+}
+
+.opc1:hover p,
+.opc2:hover p,
+.opc3:hover p,
+.opc4:hover p {
+    opacity: 1;
+}
+
+.opc1 .image,
+.opc2 .image,
+.opc3 .image,
+.opc4 .image{
+    margin-right: 20px;
+    max-width: 26px; 
+    height: auto;
+    margin-left: 5; 
+}
+
+.opc-text {
+    margin-left: 10px; 
+}
+
+.emailinferior{
+    border-radius: 14px;
+    width: 22vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    background-color: #D9D9D9;
+    margin-bottom: 10px; 
+    margin-left: 986px;
+    
+}
+
+.emailinferior p{
+    padding: 10px 10px;
+}
+.emailinferior .image{
+    padding: 10px 8px;
+    max-width: 65px; 
+    height: auto;
+}
