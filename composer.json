@@ -6,7 +6,6 @@
         }
     },
     "require": {
-        "firebase/php-jwt": "^6.8",
-        "kreait/firebase-php": "^5.26"
+        "firebase/php-jwt": "^6.9"
     }
 }
