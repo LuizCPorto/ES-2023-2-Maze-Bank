@@ -1,10 +1,10 @@
 <?php
 session_start();
-if (!isset($_SESSION['nome_do_usuario']) || !isset($_COOKIE["jwt_token"])) {
+if (!isset($_SESSION['nome']) || !isset($_COOKIE["jwt_token"])) {
     header('Location: ./../index.html');
 } 
 
-$nome_do_usuario = $_SESSION['nome_do_usuario'];
+$nome_do_usuario = $_SESSION['nome'];
  $saldo = $_SESSION['saldo'];
 ?>
 

@@ -20,12 +20,12 @@ document.querySelector('#btnSignup')
 document.getElementById('signin').addEventListener('submit', function (e) {
   e.preventDefault();
 
-  var usuario = document.getElementById('usuario').value;
+  var cpf = document.getElementById('cpfUsuario').value
   var senha = document.getElementById('senha').value;
 
 
   var formData = new FormData();
-  formData.append('nomeUsuario', usuario);
+  formData.append('cpfUsuario', cpf);
   formData.append('senha', senha);
 
 
@@ -49,7 +49,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
       if(data === "Login feito com sucesso") {
         Swal.fire(
           'Parabéns!',
-          'Cadastro feito com sucesso!',
+          'Login feito com sucesso!',
           'success'
         ).then((result)=>{
           if(result.isConfirmed){
@@ -57,7 +57,7 @@ document.getElementById('signin').addEventListener('submit', function (e) {
           }
         })
       }
-      if(data === "admin") {
+      if(data === "007") {
         Swal.fire(
           'Admin!',
           'Logando com usuario Administrador!',

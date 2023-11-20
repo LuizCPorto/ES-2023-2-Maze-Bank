@@ -6,8 +6,8 @@ class LoginModel extends Connect {
         parent::__construct();
     }
 
-    public function fazerLogin($nome, $senha) {
-        $query = "SELECT senha1, id FROM usuarios WHERE nome = :nome";
+    public function fazerLogin($cpf, $senha) {
+        $query = "SELECT senha1, id, nome FROM usuarios WHERE cpf = :cpf";
         $sqlsaldo = "SELECT conta.saldo FROM usuarios JOIN conta ON usuarios.id = conta.id_usuario WHERE usuarios.id = :ids";
         
         $saldostmt = $this->connection->prepare($sqlsaldo);
@@ -20,7 +20,7 @@ class LoginModel extends Connect {
             die("Erro ao preparar a consulta: " . print_r($this->connection->errorInfo(), true));
         }
 
-        $stmt->bindParam(':nome', $nome, PDO::PARAM_STR);
+        $stmt->bindParam(':cpf', $cpf, PDO::PARAM_STR);
 
         if ($stmt->execute()) {
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -34,16 +34,17 @@ class LoginModel extends Connect {
                 $resultSaldo = $saldostmt->fetch(PDO::FETCH_ASSOC);
                 if ($senha === $senhaArmazenada) {
                     $user_id = $result["id"];
+                    $nome = $result["nome"];
                     $saldo = floatval($resultSaldo["saldo"]); // Converte o saldo para float
                     $stmt->closeCursor();
                     $saldostmt->closeCursor();
                     
                     session_start();
-                    $_SESSION['nome_do_usuario'] = $nome;
+                    $_SESSION['nome'] = $nome;
                     $_SESSION['id'] = $user_id;
                     $_SESSION['saldo'] = $saldo;
                     return "Login feito com sucesso";
-                    header("Location: home.php");
+                    // header("Location: home.php");
                 } else {
                     $stmt->closeCursor();
                     $saldostmt->closeCursor();
