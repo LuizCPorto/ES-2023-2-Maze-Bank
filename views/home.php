@@ -34,7 +34,7 @@ $credito = $_SESSION['credito'];
         <li><img class="img2" src="img/ph_user-light.png" alt=""></li>
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="../header padrao/index.html">Meu Perfil</a>
+        <a class="dropdown-item" href="../views/detalhes.php">Meu Perfil</a>
         <a class="dropdown-item" href="#">Suporte</a>
         <a class="dropdown-item" href="../index.html">Sair</a>
       </div>
