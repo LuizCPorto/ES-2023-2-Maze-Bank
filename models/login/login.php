@@ -8,7 +8,7 @@ class LoginModel extends Connect {
 
     public function fazerLogin($cpf, $senha) {
         $query = "SELECT senha1, id, nome FROM usuarios WHERE cpf = :cpf";
-        $sqlsaldo = "SELECT conta.saldo FROM usuarios JOIN conta ON usuarios.id = conta.id_usuario WHERE usuarios.id = :ids";
+        $sqlsaldo = "SELECT conta.saldo, conta.credito FROM usuarios JOIN conta ON usuarios.id = conta.id_usuario WHERE usuarios.id = :ids";
         
         $saldostmt = $this->connection->prepare($sqlsaldo);
         $stmt = $this->connection->prepare($query);
@@ -36,6 +36,7 @@ class LoginModel extends Connect {
                     $user_id = $result["id"];
                     $nome = $result["nome"];
                     $saldo = floatval($resultSaldo["saldo"]); // Converte o saldo para float
+                    $credito = floatval($resultSaldo["credito"]); // Converte o saldo para float
                     $stmt->closeCursor();
                     $saldostmt->closeCursor();
                     
@@ -43,6 +44,7 @@ class LoginModel extends Connect {
                     $_SESSION['nome'] = $nome;
                     $_SESSION['id'] = $user_id;
                     $_SESSION['saldo'] = $saldo;
+                    $_SESSION['credito'] = $credito;
                     return "Login feito com sucesso";
                     // header("Location: home.php");
                 } else {
