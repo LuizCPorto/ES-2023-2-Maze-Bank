@@ -25,7 +25,7 @@
     </div>
 
     <form id="signin" method="POST" action="./controllers/login/Login.php">
-      <input type="text" id="cpfUsuario" name="cpfUsuario" placeholder="CPF" required />
+      <input type="text" id="cpfUsuario" name="cpfUsuario" placeholder="CPF" minlength="14" maxlength="14" required />
       <i class="fa fa-envelope iEmail" style="color: #660a07d0"></i>
       <input type="password" id="senha" name="senha" placeholder="Senha" required />
       <i class="fa fa-lock iPassword3" style="color: #660a07d0"></i>
@@ -38,7 +38,7 @@
       <i class="fa fa-envelope iEmail" style="color: #660a07d0;"></i>
       <input type="text" id="usuarioRegistro" name="usuarioRegistro" placeholder="Usuario" required />
       <i class="fa fa-user iUsuario" style="color: #660a07d0;"></i>
-      <input type="text" id="cpf" name="cpf" placeholder="CPF" required />
+      <input type="text" id="cpf" name="cpf" placeholder="CPF" minlength="14" maxlength="14" required />
       <i class="fa fa-passport icpf" style="color: #660a07d0;"></i>
       <input type="password" id="senha1" name="senha1" placeholder="Password" required />
       <i class="fa fa-lock iPassword" style="color: #660a07d0;"></i>
@@ -52,3 +52,38 @@
 </body>
 
 </html>
+
+<script>
+ 
+  function formatarCPF(cpf) {
+    cpf = cpf.replace(/\D/g, ''); 
+    cpf = cpf.replace(/^(\d{3})(\d)/, '$1.$2'); 
+    cpf = cpf.replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3'); 
+    cpf = cpf.replace(/^(\d{3})\.(\d{3})\.(\d{3})(\d)/, '$1.$2.$3-$4'); 
+    return cpf;
+  }
+
+
+  document.getElementById('cpfUsuario').addEventListener('input', function (e) {
+
+    let valorAtual = e.target.value;
+
+    
+    let cpfFormatado = formatarCPF(valorAtual);
+
+
+    e.target.value = cpfFormatado;
+  });
+
+  
+  document.getElementById('cpf').addEventListener('input', function (e) {
+
+    let valorAtual = e.target.value;
+
+    
+    let cpfFormatado = formatarCPF(valorAtual);
+
+
+    e.target.value = cpfFormatado;
+  });
+</script>
