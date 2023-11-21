@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+
+body{
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+header{
+    background-color: #660A07;
+    padding: 13px;
+    box-shadow: 0 0 3px black;
+}
+
+header li{
+    display: inline;
+    padding-left: 45px;
+
+}
+
+header h1{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Monoton', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+header li a{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 13px;
+    transition: .3s ease;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 30px;
+}
+
+header li a:hover{
+    color: #817f7f;
+}
+
+.img1 {
+    width: 130px;
+    float: left;
+    margin-top: -65px;
+}
+.img2 {
+    width: 55px;
+    float: right;
+    margin-top: -12px;
+    margin-right: 35px;
+}
+
+.dropdown{
+    float: right;
+    position: relative;
+    background-color: #660A07;
+    outline: none;
+}
+
+.extrato {
+    background-color: #d9d9d9;
+    padding: 6px;
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    overflow: hidden;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    margin-right: 60px;
+  }
+
+.saldolinha {
+    display: inline;
+    font-size: 15px; 
+}
+
+.saldoa{
+    font-size: 15px;  
+}
+
+  .extrato table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.extrato th,
+.extrato td {
+    padding: 8px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+.extrato th {
+    background-color: #660A07;
+    color: #FFFFFF;
+}
+
+.extrato tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.extrato tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+  
+.extrato .positive-value {
+    color: green;
+}
+
+.extrato .negative-value {
+    color: red;
+}

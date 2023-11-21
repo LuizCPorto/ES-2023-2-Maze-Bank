@@ -35,7 +35,7 @@ $credito = $_SESSION['credito'];
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="../views/painelCliente.php">Meu Perfil</a>
-        <a class="dropdown-item" href="#">Suporte</a>
+        <a class="dropdown-item" href="./suporte/suporte.html">Suporte</a>
         <a class="dropdown-item" href="../index.html">Sair</a>
       </div>
     </div>
@@ -48,7 +48,7 @@ $credito = $_SESSION['credito'];
       <h1>$aldo <br><?php echo "R$" . $saldo ?></h1>
     </div>
     <div id="item-1">
-      <a href="#">Extrato da Conta</a>
+      <a href="./extrato/extrato.php">Extrato da Conta</a>
       <img src="img/extrato.png" class="img-extrato" alt="">
     </div>
     <div id="item-2">
