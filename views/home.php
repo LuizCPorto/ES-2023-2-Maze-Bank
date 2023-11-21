@@ -3,9 +3,9 @@ session_start();
 if (!isset($_SESSION['nome']) || !isset($_COOKIE["jwt_token"])) {
   header('Location: ./../index.html');
 }
-
 $nome_do_usuario = $_SESSION['nome'];
 $saldo = $_SESSION['saldo'];
+$credito = $_SESSION['credito'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -25,7 +25,7 @@ $saldo = $_SESSION['saldo'];
   <ul>
     <li><img class="img1" src="img/logo 1.png" alt=""></li>
     <!-- <li><img class="img2" src="ph_user-light.png" alt=""></li> -->
-    <li><a class="ativoHome" href="">Home</a></li>
+    <li><a class="ativoHome" href="home.php">Home</a></li>
     <li><a href="">Transferências</a></li>
     <li><a href="">Depósito</a></li>
     <li><a href="">Empréstimos</a></li>
@@ -36,14 +36,14 @@ $saldo = $_SESSION['saldo'];
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="../header padrao/index.html">Meu Perfil</a>
         <a class="dropdown-item" href="#">Suporte</a>
-        <a class="dropdown-item" href="#">Sair</a>
+        <a class="dropdown-item" href="../index.html">Sair</a>
       </div>
     </div>
   </ul>
 </header>
 
 <body>
-  <div class="angry-grid">
+  <div class="angry-grid border">
     <div id="item-0">
       <h1>$aldo <br><?php echo "R$" . $saldo ?></h1>
     </div>
@@ -52,7 +52,7 @@ $saldo = $_SESSION['saldo'];
       <img src="img/extrato.png" class="img-extrato" alt="">
     </div>
     <div id="item-2">
-      <h1>Crédito <br></h1>
+      <h1>Crédito <br><?php echo "R$".$credito;?></h1>
       <img src="img/credito.png" class="img-credito" alt="">
     </div>
 
