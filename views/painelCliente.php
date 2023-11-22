@@ -6,6 +6,7 @@ if (!isset($_SESSION['nome']) || !isset($_COOKIE["jwt_token"])) {
 }
 $id = $_SESSION['id'];
 $nome = $_SESSION['nome'];
+$cartao = $_SESSION['possui_cartao'];
 include_once("../configuration/cfg.php");
 $query = "SELECT * FROM usuarios WHERE id = $id";
 $result = $conn->query($query);
@@ -39,7 +40,7 @@ function delete($id){
   <ul>
     <li><img class="img1" src="img/logo 1.png" alt=""></li>
     <!-- <li><img class="img2" src="ph_user-light.png" alt=""></li> -->
-    <li><a class="ativoHome" href="">Home</a></li>
+    <li><a class="ativoHome" href="home.php">Home</a></li>
     <li><a href="">Transferências</a></li>
     <li><a href="">Depósito</a></li>
     <li><a href="">Empréstimos</a></li>
@@ -48,9 +49,9 @@ function delete($id){
         <li><img class="img2" src="img/ph_user-light.png" alt=""></li>
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Meu Perfil</a>
-        <a class="dropdown-item" href="#">Suporte</a>
-        <a class="dropdown-item" href="#">Sair</a>
+        <a class="dropdown-item" href="../views/painelCliente.php">Meu Perfil</a>
+        <a class="dropdown-item" href="../views/suporte/suporte.html">Suporte</a>
+        <a class="dropdown-item" href="../index.html">Sair</a>
       </div>
     </div>
   </ul>
@@ -63,7 +64,7 @@ function delete($id){
         <a class="nav-link text-white active text-center" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-details" role="tab" aria-controls="v-pills-home" aria-selected="true">Detalhes da Conta</a>
         <a class="nav-link text-white text-center" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Meu Cartão</a>
         <a class="nav-link text-white text-center" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Fechar Conta</a>
-        <a class="nav-link text-white text-center" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Voltar</a>
+        <!-- <a class="nav-link text-white text-center" id="v-pills-settings-tab" data-toggle="pill" href="../index.html" role="tab" aria-controls="v-pills-settings" aria-selected="false">Voltar</a> -->
       </div>
     </div>
     <div class="col-9">
@@ -94,11 +95,26 @@ function delete($id){
                 <label for="senha2">Confirme a Senha:</label>
                 <input type="text" class="form-control form-control-sm" name="senha2" id="senha2" value="<?php echo $result["senha2"] ?>">
               </div>
-              <button type="submit" class="btn btn-danger">Enviar</button>
+              <button type="submit" class="btn">Enviar</button>
             </form>
           </div>
         </div>
-        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">Solicitar Cartao</div>
+        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+          <?php
+          if ($cartao == 'N') {
+            echo "<h3 class='cartao'>Foi verificado que você ainda não tem o cartão MazeBank<br>Deseja solicitar?</h3>";
+            echo "<img src='img/cartoes.png' class='img-cartoes' alt=''>";
+            echo "<br>";
+            echo 
+            "<div class='botao'>
+            <button class='btn1' onclick='' >Solicitar</button>
+            </div>";
+          }
+          elseif ($cartao == 'S') {
+            echo "eviado para analise";
+          }
+          ?>
+        </div>
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
           <div class="img-user">
             <img src="img/image 1.png" alt="">
@@ -114,7 +130,7 @@ function delete($id){
             ?>
           </div>
         </div>
-        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">home</div>
+        <!-- <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">home</div> -->
       </div>
     </div>
   </div>
