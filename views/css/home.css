@@ -176,11 +176,8 @@ header li a:hover {
     
  }
  #item-4 {
- 
-
     grid-row-start: 1;
     grid-column-start: 5;
- 
     grid-row-end: 5;
     grid-column-end: 7;
     
