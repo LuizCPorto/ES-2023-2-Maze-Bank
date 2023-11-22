@@ -1,12 +1,25 @@
 <?php
 session_start();
+
+include_once('../configuration/cfg.php');
 if (!isset($_SESSION['nome']) || !isset($_COOKIE["jwt_token"])) {
   header('Location: ./../index.html');
 }
+
+$id = $_SESSION['id'];
+$sqlsaldo = "SELECT conta.saldo, conta.credito, conta.possui_cartao FROM usuarios JOIN conta ON usuarios.id = conta.id_usuario WHERE usuarios.id = '$id' ";
+$resultsaldo = $conn->query($sqlsaldo);
+$resultinf = mysqli_fetch_assoc($resultsaldo);
+
+$saldo = $resultinf["saldo"];
+$credito = $resultinf["credito"];
+
+
 $nome_do_usuario = $_SESSION['nome'];
-$saldo = $_SESSION['saldo'];
-$credito = $_SESSION['credito'];
+
 $cartao = $_SESSION['possui_cartao'];
+$saldoFormatado = number_format($saldo, 2, ',', '.');
+$creditoFormatado = number_format($credito, 2, ',', '.');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -46,14 +59,14 @@ $cartao = $_SESSION['possui_cartao'];
 <body>
   <div class="angry-grid border">
     <div id="item-0">
-      <h1>$aldo <br><?php echo "R$" . $saldo ?></h1>
+      <h1>$aldo <br><?php echo "R$" . $saldoFormatado ?></h1>
     </div>
     <div id="item-1">
       <a href="./extrato/extrato.php">Extrato da Conta</a>
       <img src="img/extrato.png" class="img-extrato" alt="">
     </div>
     <div id="item-2">
-      <h1>Crédito <br><?php echo "R$".$credito;?></h1>
+      <h1>Crédito <br><?php echo "R$".$creditoFormatado;?></h1>
       <img src="img/credito.png" class="img-credito" alt="">
     </div>
 

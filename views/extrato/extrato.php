@@ -6,12 +6,18 @@ include_once('../../configuration/cfg.php');
 $id = $_SESSION['id'];
 
 $sqlSelect = "SELECT id_conta, data_transferencia, valor FROM historico where id_conta = '$id' ORDER BY data_transferencia DESC ";
+
+$sqlsaldo = "SELECT conta.saldo, conta.credito, conta.possui_cartao FROM usuarios JOIN conta ON usuarios.id = conta.id_usuario WHERE usuarios.id = '$id' ";
+
 $result = $conn->query($sqlSelect);
 
-$tableData = ''; // Inicializa a variável que conterá os dados da tabela
+$resultsaldo = $conn->query($sqlsaldo);
+$resultinf = mysqli_fetch_assoc($resultsaldo);
+
+$tableData = ''; 
 
 if ($result->num_rows > 0) {
-    $tableData .= '<table>'; // Inicia a tabela
+    $tableData .= '<table>';
     $tableData .= '<tr><th>Nº da Conta</th><th>Data da Transferência</th><th>Valor da Transferência</th></tr>'; // Cabeçalho da tabela
     while ($user_data = mysqli_fetch_assoc($result)) {
         $conta = $user_data['id_conta'];
@@ -21,11 +27,11 @@ if ($result->num_rows > 0) {
         $valorClass = ($valor >= 0) ? 'positive-value' : 'negative-value';
         $tableData .= "<tr><td>$conta</td><td>$data</td><td class='$valorClass'>$valor</td></tr>";
     }
-    $tableData .= '</table>'; // Fecha a tabela
+    $tableData .= '</table>'; 
 }
 
-$nome_do_usuario = $_SESSION['nome'];
-$saldo = $_SESSION['saldo'];
+
+$saldo = $resultinf["saldo"];
 $saldoFormatado = number_format($saldo, 2, ',', '.');
 
 ?>
