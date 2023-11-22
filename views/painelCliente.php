@@ -12,14 +12,18 @@ $query = "SELECT * FROM usuarios WHERE id = $id";
 $result = $conn->query($query);
 $result = $result->fetch_assoc();
 
-function delete($id){
+$queryConta = "SELECT * FROM conta WHERE id_usuario = $id";
+$resultConta = $conn->query($queryConta);
+$resultConta = $resultConta->fetch_assoc();
+
+function delete($id)
+{
   include_once("../configuration/cfg.php");
   $sqlSelect = "SELECT * FROM usuarios WHERE id=$id";
   $delete = $conn->query($sqlSelect);
-  if($delete->num_rows > 0)
-  {
-      $sqlDelete = "DELETE FROM usuarios WHERE id=$id";
-      $resultDelete = $conn->query($sqlDelete);
+  if ($delete->num_rows > 0) {
+    $sqlDelete = "DELETE FROM usuarios WHERE id=$id";
+    $resultDelete = $conn->query($sqlDelete);
   }
 }
 
@@ -32,6 +36,7 @@ function delete($id){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/detalhes.css">
+  <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <title>MazeBank - Meu Perfil</title>
 </head>
@@ -99,22 +104,68 @@ function delete($id){
             </form>
           </div>
         </div>
+        <!-- ABA - SOLICITAR CARTÃO -->
         <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+
           <?php
-          if ($cartao == 'N') {
-            echo "<h3 class='cartao'>Foi verificado que você ainda não tem o cartão MazeBank<br>Deseja solicitar?</h3>";
-            echo "<img src='img/cartoes.png' class='img-cartoes' alt=''>";
-            echo "<br>";
-            echo 
-            "<div class='botao'>
-            <button class='btn1' onclick='' >Solicitar</button>
-            </div>";
+          if ($resultConta["possui_cartao"] == 'S') {
+          ?>
+            <h4 align="center">Você já possui um cartão, obrigado por ser nosso cliente!</h4>
+          <?php
           }
-          elseif ($cartao == 'S') {
-            echo "eviado para analise";
+          if ($resultConta["possui_cartao"] == 'N') {
+          ?>
+            <h4 align="center">Foi verificado que você ainda não tem o cartão MazeBank.</h4>
+            <h5 align="center">Deseja Solicitar ?</h5>
+          <?php
           }
           ?>
+          <?php
+          if ($resultConta["possui_cartao"] == 'P') {
+          ?>
+            <h4 align="center">Seu cartão foi aprovado com sucesso!</h4>
+            <h5 align="center">Logo chegará ao seu endereço :) </h5>
+          <?php
+          }
+          ?>
+
+          <div class="container mt-5">
+            <img style="height: 300px; width: 480px;" src="img/cartao.png" class="img-cartao-frente" alt="">
+            <img style="height: 300px; width: 480px;" src="img/verso-cartao.png" class="img-cartao-verso" alt="">
+          </div>
+
+          <?php
+          if ($resultConta["possui_cartao"] == 'N') {
+          ?>
+            <div style="text-align: center; margin-top: 50px;">
+              <form id="solicitar-cartao-form" method="POST" action="../controllers/solicitarCartao/SolicitarCartao.php">
+                <input type="hidden" name="id_usuario" value="<?php echo $_SESSION['id']; ?>">
+                <input type="hidden" name="possui_cartao" value="P">
+
+                <button type="submit" class="btn btn-danger">Solicitar</button>
+              </form>
+            </div>
+          <?php
+          }
+          ?>
+
+          <?php
+          if ($resultConta["possui_cartao"] == 'P') {
+          ?>
+            <div style="text-align: center; margin-top: 50px;">
+              <form id="solicitar-cartao-form" method="POST" action="../controllers/solicitarCartao/SolicitarCartao.php">
+                <input type="hidden" name="id_usuario" value="<?php echo $_SESSION['id']; ?>">
+                <input type="hidden" name="possui_cartao" value="N">
+
+                <button type="submit" class="btn btn-danger">Deseja cancelar o envio ?!</button>
+              </form>
+            </div>
+          <?php
+          }
+          ?>
+
         </div>
+        <!--  -->
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
           <div class="img-user">
             <img src="img/image 1.png" alt="">
