@@ -109,7 +109,9 @@ function delete($id){
             <p class="aviso2">Ao fazer isso você perderá acesso as
               atividades em sua conta.</p>
             <p class="danger">Certifique que não tem nem um Débito ou Empréstimo ativo.</p>
-            <button class="btn" onclick="">Excluir Conta</button>
+            <?php
+            echo "<button class='btn' onclick='confirmDelete({$_SESSION['id']})'>Excluir Conta</button>";
+            ?>
           </div>
         </div>
         <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">home</div>
@@ -117,6 +119,26 @@ function delete($id){
     </div>
   </div>
 </body>
+
+<script>
+        function confirmDelete(userId) {
+            Swal.fire({
+                title: 'Tem certeza?',
+                text: 'Isso excluirá sua conta',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sim, deletar!',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '../routes/crud/delete.php?id=' + userId;
+                }
+            });
+        }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
