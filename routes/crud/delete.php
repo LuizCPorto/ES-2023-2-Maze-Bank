@@ -5,7 +5,6 @@ if(!empty($_GET['id']))
 {
 
     $id = $_GET['id'];
-    echo $id;
 
     $sqlSelect = "SELECT * FROM usuarios WHERE id=$id";
 
