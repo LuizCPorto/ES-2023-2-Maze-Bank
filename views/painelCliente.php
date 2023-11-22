@@ -200,7 +200,7 @@ function delete($id)
                 cancelButtonText: 'Cancelar'
             }).then((result) => {
                 if (result.isConfirmed) {
-                    window.location.href = '../routes/crud/delete.php?id=' + userId;
+                    window.location.href = '../routes/crud/deleteUser.php?id=' + userId;
                 }
             });
         }
