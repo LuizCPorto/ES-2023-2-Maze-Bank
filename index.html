@@ -54,7 +54,7 @@
 </html>
 
 <script>
- 
+
   function formatarCPF(cpf) {
     cpf = cpf.replace(/\D/g, ''); 
     cpf = cpf.replace(/^(\d{3})(\d)/, '$1.$2'); 
@@ -63,26 +63,20 @@
     return cpf;
   }
 
-
   document.getElementById('cpfUsuario').addEventListener('input', function (e) {
 
     let valorAtual = e.target.value;
-
     
     let cpfFormatado = formatarCPF(valorAtual);
-
 
     e.target.value = cpfFormatado;
   });
 
-  
   document.getElementById('cpf').addEventListener('input', function (e) {
 
     let valorAtual = e.target.value;
 
-    
     let cpfFormatado = formatarCPF(valorAtual);
-
 
     e.target.value = cpfFormatado;
   });
