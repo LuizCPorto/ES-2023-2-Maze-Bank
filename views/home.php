@@ -7,7 +7,6 @@ $nome_do_usuario = $_SESSION['nome'];
 $saldo = $_SESSION['saldo'];
 $credito = $_SESSION['credito'];
 $cartao = $_SESSION['possui_cartao'];
-echo $cartao;
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
