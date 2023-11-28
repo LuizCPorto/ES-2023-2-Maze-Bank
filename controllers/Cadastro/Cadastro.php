@@ -1,6 +1,6 @@
 <?php
 
-require_once('../../models/Cadastro/Cadastro.php');
+require_once(__DIR__ . '../../models/Cadastro/Cadastro.php');
 
 class CadastroController{
     private $cadastro;
