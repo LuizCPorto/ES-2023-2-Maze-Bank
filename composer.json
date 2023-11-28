@@ -5,7 +5,16 @@
             "Carli\\Es20232MazeBank\\": "src/"
         }
     },
+
+    "autoload-dev": {
+        "psr-4": {
+            "tests\\" : "tests/"
+        }
+    },
     "require": {
         "firebase/php-jwt": "^6.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10"
     }
 }
