@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__ .  '../../configuration/connect.php');
+require_once('../../configuration/connect.php');
 
 
 class CadastroModel extends Connect{
