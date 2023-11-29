@@ -1,5 +1,5 @@
 <?php
-require_once('../../configuration/connect.php');
+require_once(__DIR__ . '../../../configuration/connect.php');
 
 class LoginModel extends Connect {
     function __construct() {
@@ -31,22 +31,22 @@ class LoginModel extends Connect {
                 $saldostmt->bindParam(':ids', $ids, PDO::PARAM_STR);
 
                 $saldostmt->execute();
-                $resultSaldo = $saldostmt->fetch(PDO::FETCH_ASSOC);
+                //$resultSaldo = $saldostmt->fetch(PDO::FETCH_ASSOC);
                 if ($senha === $senhaArmazenada) {
-                    $user_id = $result["id"];
-                    $nome = $result["nome"];
-                    $saldo = floatval($resultSaldo["saldo"]); // Converte o saldo para float
-                    $credito = floatval($resultSaldo["credito"]); // Converte o saldo para float
-                    $cartao = $resultSaldo["possui_cartao"]; 
+                    //$user_id = $result["id"];
+                    //$nome = $result["nome"];
+                    //$saldo = floatval($resultSaldo["saldo"]); // Converte o saldo para float
+                    //$credito = floatval($resultSaldo["credito"]); // Converte o saldo para float
+                    //$cartao = $resultSaldo["possui_cartao"]; 
                     $stmt->closeCursor();
                     $saldostmt->closeCursor();
                     
-                    session_start();
-                    $_SESSION['nome'] = $nome;
-                    $_SESSION['id'] = $user_id;
-                    $_SESSION['saldo'] = $saldo;
-                    $_SESSION['credito'] = $credito;
-                    $_SESSION['possui_cartao'] = $cartao;
+                    //session_start();
+                    //$_SESSION['nome'] = $nome;
+                    //$_SESSION['id'] = $user_id;
+                    //$_SESSION['saldo'] = $saldo;
+                    //$_SESSION['credito'] = $credito;
+                    //$_SESSION['possui_cartao'] = $cartao;
                     return "Login feito com sucesso";
                     // header("Location: home.php");
                 } else {
