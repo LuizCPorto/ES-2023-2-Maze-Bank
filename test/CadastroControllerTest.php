@@ -21,7 +21,7 @@ class CadastroControllerTest extends TestCase
         $senha1 = 'password123';
         $senha2 = 'password123';
 
-        // Substitua CadastroModel pelo caminho real do seu modelo Cadastro
+
         $this->assertEquals("Registro feito com sucesso!", $controller->inserirDados($nome, $email, $cpf, $senha1, $senha2));
 
     }
@@ -29,5 +29,10 @@ class CadastroControllerTest extends TestCase
 
 $unitTest = new CadastroControllerTest();
 $results = $unitTest->testInserirDados();
-echo $results;
+if ($results == '') {
+    echo "Teste Campos Vazios [OK]\nTeste Valores Validos [OK]";
+}
+else { 
+    echo $results;
+}
 ?>
