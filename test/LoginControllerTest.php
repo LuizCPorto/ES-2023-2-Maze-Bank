@@ -8,7 +8,7 @@ class LoginControllerTest extends TestCase {
     public function testRealizarLogin() {
         $controller = new LoginController();
 
-        $this->assertEquals("Por favor preencha todos os campos.", $controller->realizarLogin('', ''));
+        $this->assertEquals("Por favor, preencha todos os campos.", $controller->realizarLogin('', ''));
 
         $cpf = '616.036.703-01';
         $senha = '123';
