@@ -724,3 +724,14 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(69 10 10 / var(--tw-bg-opacity));
 }
+
+.formt {
+  padding-left: 13rem;
+  padding-top: 20rem;
+  height: 25rem;
+  margin-bottom: -2rem;
+}
+
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
