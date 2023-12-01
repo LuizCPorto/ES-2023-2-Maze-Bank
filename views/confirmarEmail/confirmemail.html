@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="../css/confirmarEmail.css">
+  <title>Redefinir Senha</title>
+  <link rel="stylesheet" href="../css/index.css">
   <script src="https://kit.fontawesome.com/1fee394696.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class="red"></div>
   <div class="login-esquerda">
     <img src="../img/logo.webp" class="image" alt="mazebank">
     <h1>MAZE BANK</h1>
@@ -17,10 +18,13 @@
   <div class="container">
     <form id="signin" method="POST" action="../../controllers/confirmarEmail/confirmarEmail.php ">
         <input type="text" id="email" name="emailUsuario" placeholder="Email" required />
-        <i class="fa fa-envelope iEmail" style="color: #000000;"></i>
+        <i class="fa fa-envelope iEmail" style="color: #660a07d0;"></i>
         <button type="submit">Confirme o email</button>
         <br>
     </form>
   </div>
+
+  <script src="../js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

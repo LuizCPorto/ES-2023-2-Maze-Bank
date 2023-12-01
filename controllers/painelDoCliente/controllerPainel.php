@@ -5,46 +5,38 @@ require_once(__DIR__ . "/../../models/Painel/modelPainel.php");
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
-// $token = $_COOKIE["jwt_token"];
-// $decoded = JWT::decode($token, new Key("62486684269Pp2023", 'HS256'));
-// $decoded_Array = (array) $decoded;
-
-// $model = new modelPainel();
-// $array = $model -> pegarDadosDoUsuario($decoded_Array["email"]);
-// print_r($array);
-
 class controllerPainel 
 {
-    public function __construct() {
-        $this -> checkToken();
+    private $update;
+
+    function __construct()
+    {
+        $this->update = new modelPainel();
     }
 
-    public function extrairDadosDoUsuario() {
-        $token = $_COOKIE["jwt_token"];
-        $decoded = (array) JWT::decode($token, new Key("62486684269Pp2023", 'HS256'));
-        $model = new modelPainel();
-        return $model -> pegarDadosDoUsuario($decoded["email"]); //$decoded["email"] == nome do usuario
-    }
-
-    private function checkToken() {
-        if (!isset($_COOKIE["jwt_token"])) {
-            header('Location: ./../index.html');
-            exit;
+    public function inserirDados($nome,$email,$cpf,$senha1,$senha2){
+        if(empty($email) || empty($cpf)){
+            return "Por favor, preeencha todos os campos.";
+        }
+        elseif ($senha1 != $senha2) {
+            return "Senhas sao diferentes.";
+        }
+        else{
+            $resultado = $this->update->atualizarDadosDoUsuario($cpf,$nome,$email,$cpf,$senha1);
+            return $resultado;
         }
     }
+
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $cntrl = new controllerPainel();
-    $dados = $cntrl ->extrairDadosDoUsuario();
-    $antigoCpf = $dados["cpf"];
-
-    $novoNome = $_POST["Usuario"];
-    $email = $_POST["email"];
-    $cpf = $_POST["cpf"];
-    $senha = $_POST["senha"];
-
-    $model = new modelPainel();
-    $model ->atualizarDadosDoUsuario($antigoCpf, $novoNome, $email, $cpf, $senha);
+    $registercontroler = new controllerPainel();
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $cpf = $_POST['cpf'];
+    $senha = $_POST['senha1'];
+    $senha2 = $_POST['senha2'];
+    $resultadoRegistro = $registercontroler->inserirDados($nome,$email,$cpf,$senha,$senha2);
+    echo $resultadoRegistro;
     header("Location: ./../../index.html");
 }
