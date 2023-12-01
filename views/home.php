@@ -40,9 +40,9 @@ $creditoFormatado = number_format($credito, 2, ',', '.');
     <li><img class="img1" src="img/logo 1.png" alt=""></li>
     <!-- <li><img class="img2" src="ph_user-light.png" alt=""></li> -->
     <li><a class="ativoHome" href="home.php">Home</a></li>
-    <li><a href="">Transferências</a></li>
-    <li><a href="">Depósito</a></li>
-    <li><a href="">Empréstimos</a></li>
+    <li><a href="./transferencia/transferencia.php">Transferências</a></li>
+    <li><a href="./deposito/deposito.php">Depósito</a></li>
+    <li><a href="./emprestimo/">Empréstimos</a></li>
     <div class="dropdown">
       <button class="btn btn-danger border border-light bg-transparent btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <li><img class="img2" src="img/ph_user-light.png" alt=""></li>
