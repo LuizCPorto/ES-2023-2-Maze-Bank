@@ -1,3 +1,18 @@
+<?php
+require_once "../../controllers/transferencia/controllerTransferencia.php";
+$_SESSION["status_transferencia"] = " ";
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    
+    $controller = new controllerTransferencia;
+    $chave = $_POST["chave"];
+    $valor = floatval(str_replace(",", ".", $_POST["valor"]));
+    $_SESSION["status_transferencia"] = $controller -> fazerTransferencia($chave, $valor);
+    
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +55,7 @@
     <main class="h-screen">
 
         
-        <form id="form" action="../../controllers/transferencia/controllerTransferencia.php" method="POST" class="w-2/3 h-3/6 mt-9 rounded-3xl mx-auto pt-5 pl-28 bg-[#D6D6D6] formt">
+        <form id="form" action="" method="POST" class="w-2/3 h-3/6 mt-9 rounded-3xl mx-auto pt-5 pl-28 bg-[#D6D6D6] formt">
 
             <h1 class="">Chave do Destinatário:</h1>
             <i class="fa-solid fa-key fa-2xl relative left-4 top-[54px]"></i>
@@ -55,7 +70,7 @@
             <p style="position: relative; left: 1rem;"><?php echo $_SESSION["status_transferencia"]?></p>
         </form>
 
-        <button class=" mx-auto bg-[#660a07] rounded-3xl mt-14 hover:bg-red-950 block" form="form">
+        <button class=" mx-auto bg-[#660a07] rounded-3xl mt-14 hover:bg-red-950 block" onclick="submit_()">
             <h1 class="text-white my-2 mx-36">Confirmar</h1>
         </button>
         
@@ -63,6 +78,12 @@
 
 </body>
 
+<script>
+    function submit_() {
+        let form = document.getElementById("form");
+        form.submit();
+    }
+</script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

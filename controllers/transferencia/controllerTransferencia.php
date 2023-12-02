@@ -8,7 +8,6 @@ class controllerTransferencia
 {
     function fazerTransferencia($chave, $valor) {
         if ($_SESSION['saldo'] < $valor) {
-            echo $_SESSION['saldo'];
             return "Saldo insuficiente!";
         }
         else {
@@ -18,7 +17,7 @@ class controllerTransferencia
 
                 $model -> transferir($chave, $valor);
                 $_SESSION['saldo'] = $_SESSION['saldo'] - $valor;
-                return "Transferencia efetuada.";
+                return "Operação efetuada!";
                 
             }
             return "Chave não encontrada.";
@@ -29,13 +28,5 @@ class controllerTransferencia
 
 
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    
-    $controller = new controllerTransferencia;
-    $chave = $_POST["chave"];
-    $valor = $_POST["valor"];
-    $_SESSION["status_transferencia"] = $controller -> fazerTransferencia($chave, $valor);
-    
-    echo $_SESSION["status_transferencia"];
-}
+
 
