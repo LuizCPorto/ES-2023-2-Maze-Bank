@@ -1,50 +1,40 @@
 <?php
-
+session_start();
 require_once(__DIR__ . '/../../configuration/connect.php');
 
-class modelPainel extends Connect
+class modelEmprestimo extends Connect
 {
     function __construct() {
         parent::__construct();
     }
 
+    private function sql($valorDoEmprestimo) {
+        $id = $_SESSION["id"];
+        $query = "UPDATE conta SET conta.saldo = conta.saldo + $valorDoEmprestimo, conta.debito = conta.debito + $valorDoEmprestimo WHERE conta.id_usuario = $id;";
+        return $query;
+    }
 
-
-    public function pagarEmprestimo() {
-        
+    public function fazerEmprestimo($valorDoEmprestimo) {
+        try {
+            $result = $this-> connection -> query($this-> sql($valorDoEmprestimo));
+            $_SESSION["saldo"] += $valorDoEmprestimo;
+            $_SESSION["debito"] += $valorDoEmprestimo;
+            return $result;
+        } catch (\PDOException $th) {
+            echo "Deu problema: " . $th -> getMessage();
+        }
     }
 
 
-    public function solicitarEmprestimo() {
-        
+    public function pagarEmprestimo($pagamento) {
+        try {
+            $result = $this-> connection -> query($this-> sql(-$pagamento));
+            $_SESSION["saldo"] -= $pagamento;
+            $_SESSION["debito"] -= $pagamento;
+            return $result;
+        } catch (\PDOException $th) {
+            echo "Deu problema: " . $th -> getMessage();
+        }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    public function pegarDadosDoUsuario($nome) {
-       $cmd = $this ->connection -> prepare("SELECT * FROM usuarios WHERE nome = :nome");
-       $cmd -> bindValue(":nome", $nome);
-       $cmd -> execute();
-       return $cmd->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function atualizarDadosDoUsuario($antigoCpf,$name, $email, $cpf, $senha) {
-        echo $name . "<--------";
-        $this -> connection -> query("UPDATE usuarios SET nome = '$name', email = '$email', cpf = '$cpf', senha1 = '$senha', senha2 = '$senha' WHERE cpf = '$antigoCpf';");
-    }
 }

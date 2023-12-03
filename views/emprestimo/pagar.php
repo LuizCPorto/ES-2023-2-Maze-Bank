@@ -1,3 +1,20 @@
+<?php
+require_once "../../controllers/emprestimo/controllerEmprestimo.php";
+
+
+$_SESSION["emprestimo_status"] = " ";
+
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $valor = floatval(str_replace(",", ".", $_POST["valorEmprestimo"]));
+    $controller = new controllerEmprestimo;
+    $_SESSION["emprestimo_status"] = $controller -> devolverEmprestimo($valor);
+    $status = $_SESSION["emprestimo_status"];
+}
+$valorDebito = number_format($_SESSION['debito'], 2, ',', '.');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,24 +54,22 @@
     </header>
 
     <h1 class="text-center text-6xl">Pagar Emprestimo</h1>
-    <form action="#" method="post" class="h-screen">
+    <form action="#" method="POST" class="h-screen">
         <div class="w-2/3 h-3/6 mt-9 rounded-3xl mx-auto pt-5 bg-[#D6D6D6]">
 
             <div class=" pl-56">
 
-                <h1 class="mb-5"><span class="font-bold">Débito total:</span> R$ 15.000,00</h1>
+                <h1 class="mb-5"><span class="font-bold">Débito total:</span> R$ <?php echo $valorDebito ?></h1>
                 <h1 class="">Valor do pagamento:</h1>
                 <i class="fa-solid fa-money-bill fa-2xl relative left-4 top-[54px]"></i>
-                <input class="w-3/4 h-20 bg-white rounded-3xl  block text-2xl px-16">
-
+                <input class="w-3/4 h-20 bg-white rounded-3xl  block text-2xl px-16" name="valorEmprestimo">
+                <p style="position: relative; left: 0.75rem;"><?php echo $status;?></p>
 
             </div>
 
-
-
         </div>
 
-        <button class=" mx-auto bg-[#660a07] rounded-3xl mt-14 hover:bg-red-950 block">
+        <button class=" mx-auto bg-[#660a07] rounded-3xl mt-14 hover:bg-red-950 block" type="submit">
             <h1 class="text-white my-2 mx-36">Confirmar</h1>
         </button>
     </form>
