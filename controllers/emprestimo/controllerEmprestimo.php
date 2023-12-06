@@ -7,7 +7,7 @@ class controllerEmprestimo
 {
     function efetuarEmprestimo($valor)
     {
-        if (empty($valor)) {
+        if (empty($valor) || $valor < 0) {
             return "Preencha corretamente o campo!";
         }
         if ($valor > $_SESSION["emprestimo_disponivel"]) {
@@ -26,6 +26,10 @@ class controllerEmprestimo
     {
         if ($valor > $_SESSION["saldo"]) {
             return "Saldo insuficiente!";
+        }
+        
+        if ($valor < 0 || $valor > $_SESSION["debito"]) {
+            return "Valor invalido";
         }
 
         if (empty($valor)) {
