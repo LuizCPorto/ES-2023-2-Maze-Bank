@@ -2,6 +2,11 @@
 session_start();
 
 include_once('../configuration/cfg.php');
+
+define("EMPRESTIMO_MAXIMO", 15000.00);
+$_SESSION["emprestimo_disponivel"] = EMPRESTIMO_MAXIMO - $_SESSION["debito"];
+
+
 if (!isset($_SESSION['nome']) || !isset($_COOKIE["jwt_token"])) {
   header('Location: ./../index.html');
 }
@@ -13,11 +18,12 @@ $resultinf = mysqli_fetch_assoc($resultsaldo);
 
 $saldo = $resultinf["saldo"];
 $credito = $resultinf["credito"];
-
+$emprestimo = $_SESSION['emprestimo_disponivel'];
 
 $nome_do_usuario = $_SESSION['nome'];
 
 $cartao = $_SESSION['possui_cartao'];
+$emprestimo = number_format($emprestimo, 2, ',', '.');
 $saldoFormatado = number_format($saldo, 2, ',', '.');
 $creditoFormatado = number_format($credito, 2, ',', '.');
 ?>
@@ -72,7 +78,7 @@ $creditoFormatado = number_format($credito, 2, ',', '.');
 
     <div id="item-3">
       <h1>Empréstimo <br>
-        <h5>Empréstimo disponivel para sua conta: <br>R$ 10.000,00</h5>
+        <h5>Empréstimo disponivel para sua conta: <br>R$ <?php echo $emprestimo?></h5>
       </h1>
       <img src="img/emprestimo.png" class="img-emprestimo" alt="">
     </div>
