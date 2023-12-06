@@ -2,6 +2,11 @@
 session_start();
 
 include_once('../configuration/cfg.php');
+
+define("EMPRESTIMO_MAXIMO", 15000.00);
+$_SESSION["emprestimo_disponivel"] = EMPRESTIMO_MAXIMO - $_SESSION["debito"];
+
+
 if (!isset($_SESSION['nome']) || !isset($_COOKIE["jwt_token"])) {
   header('Location: ./../index.html');
 }
@@ -13,11 +18,12 @@ $resultinf = mysqli_fetch_assoc($resultsaldo);
 
 $saldo = $resultinf["saldo"];
 $credito = $resultinf["credito"];
-
+$emprestimo = $_SESSION['emprestimo_disponivel'];
 
 $nome_do_usuario = $_SESSION['nome'];
 
 $cartao = $_SESSION['possui_cartao'];
+$emprestimo = number_format($emprestimo, 2, ',', '.');
 $saldoFormatado = number_format($saldo, 2, ',', '.');
 $creditoFormatado = number_format($credito, 2, ',', '.');
 ?>
@@ -40,9 +46,9 @@ $creditoFormatado = number_format($credito, 2, ',', '.');
     <li><img class="img1" src="img/logo 1.png" alt=""></li>
     <!-- <li><img class="img2" src="ph_user-light.png" alt=""></li> -->
     <li><a class="ativoHome" href="home.php">Home</a></li>
-    <li><a href="">Transferências</a></li>
-    <li><a href="">Depósito</a></li>
-    <li><a href="">Empréstimos</a></li>
+    <li><a href="./transferencia/transferencia.php">Transferências</a></li>
+    <li><a href="./deposito/deposito.php">Depósito</a></li>
+    <li><a href="./emprestimo/">Empréstimos</a></li>
     <div class="dropdown">
       <button class="btn btn-danger border border-light bg-transparent btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <li><img class="img2" src="img/ph_user-light.png" alt=""></li>
@@ -72,7 +78,7 @@ $creditoFormatado = number_format($credito, 2, ',', '.');
 
     <div id="item-3">
       <h1>Empréstimo <br>
-        <h5>Empréstimo disponivel para sua conta: <br>R$ 10.000,00</h5>
+        <h5>Empréstimo disponivel para sua conta: <br>R$ <?php echo $emprestimo?></h5>
       </h1>
       <img src="img/emprestimo.png" class="img-emprestimo" alt="">
     </div>
