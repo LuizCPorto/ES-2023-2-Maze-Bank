@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+html, body {
+  background-color: #cbc8c8; 
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login-esquerda{
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 300px;
+}
+
+.login-esquerda > h1 { 
+  color: rgb(0, 0, 0);
+  font-size: 2vw;
+  margin: 0 90px;
+}
+.login-esquerda > h2 { 
+  color: rgb(0, 0, 0);
+  font-size: 1vw;
+  margin: 0 105px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.container {
+  background-color: rgb(185, 26, 26);
+  padding: 6px;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 0 #c7c6c6;
+  margin-right: 60px;
+}
+
+form {
+  position: absolute;
+  margin-top: 80px;
+  transition: .5s;
+  width: 300px;
+  height: 400px;
+}
+
+.btnColor {
+  position: absolute;
+  width: 118px;
+  height: 100%;
+  background: linear-gradient(to right, #c7c6c6, #c7c6c6);
+  border-radius: 30px;
+  transition: .3s;
+}
+
+input[type="text"] {
+  border: none;
+  margin-top: 40px;
+  border-radius: 60px;
+  padding: 8px 0 8px 35px;
+  outline: none;
+  width: 100%;
+  background: #c7c6c6;
+}
+
+button[type="submit"] {
+  background: #c7c6c6;
+  color: rgb(0, 0, 0);
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 8px 0 8px 15px;
+  font-size: 15px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+i {
+  position: absolute;
+  left: 0;
+  padding: 10px 10px;
+}
+
+.iEmail {
+  top: 40px;
+}

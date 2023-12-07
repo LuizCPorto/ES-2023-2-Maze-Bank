@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+html, body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Ajusta a ordem de empilhamento, se necessário */
+    background-color: #660A07;
+    padding: 15px;
+    box-shadow: 0 0 3px black;
+}
+
+header li{
+    display: inline;
+    padding-left: 45px;
+
+}
+
+header h1{
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Monoton', sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+
+header li a{
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 13px;
+    transition: .3s ease;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 30px;
+}
+
+header li a:hover{
+    color: rgb(129, 127, 127);
+}
+
+.img1 {
+    width: 130px;
+    float: left;
+    margin-top: -65px;
+}
+.img2 {
+    width: 60px;
+    float: right;
+    margin-top: -12px;
+    margin-right: 35px;
+}
+
+.dropdown{
+    float: right;
+    position: relative;
+    background-color: #660A07;
+    outline: none;
+}
+
+.itens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opc1,
+.opc2,
+.opc3,
+.opc4 {
+    width: 94vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    margin-bottom: 10px;
+    position: relative;
+    transition: margin-top 0.3s ease;
+}
+
+.opc1 .image,
+.opc2 .image,
+.opc3 .image,
+.opc4 .image{
+    margin-right: 20px;
+    max-width: 26px; 
+    height: auto;
+    margin-left: 5; 
+}
+
+.opc-text {
+    padding: 10px; /* Adicionei um padding para melhorar a aparência */
+    background-color: #D9D9D9;
+    display: none;
+    transition: opacity 0.3s ease;
+    text-align: start;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 94vw;
+    opacity: 0;
+    box-sizing: border-box;
+}
+
+.opc-text.show-text {
+    display: block;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+
+.opc-text.show-text + div {
+    margin-top: 10px;
+}
+
+.emailinferior{
+    border-radius: 14px;
+    width: 22vw;
+    height: 14vh;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    background-color: #D9D9D9;
+    margin-bottom: 10px; 
+    margin-left: 986px;
+    
+}
+
+.emailinferior p{
+    padding: 10px 10px;
+}
+.emailinferior .image{
+    padding: 10px 8px;
+    max-width: 65px; 
+    height: auto;
+}

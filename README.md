@@ -309,3 +309,173 @@ O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 �
 
 
 ![RF-1 5 Consultar Saldo (1)](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/020fa71c-0709-40a3-a9ab-5e01a8b95077)
+
+## *US-2.0 Registrar e logar 
+# User story
+
+ |User Story
+ |-------------------------------------
+ | Como um usuário novo do banco gostaria de criar uma nova conta com meus dados para que seja possivel gerenciar minhas contas e dinheiro.
+
+## Protótipo
+![Tela login](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/03af0bbd-9d83-4547-9b74-b15efd5f3d98)
+![Tela Registro](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/67d069be-c04b-4ae5-9956-b2185782ea60)
+
+## *US-2.1 Recuperar Senha 
+# User story
+
+ |User Story
+ |-------------------------------------
+ | Como cliente desejo poder recuperar minha senha, caso eu tenha perdido o acesso a conta.
+
+## Protótipo
+![Recuperar senha](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/1743341d-f09a-4d39-93c8-303c28c9e1ef)
+
+## *US-2.3 Painel do Cliente
+# User story
+
+ |User Story
+ |-------------------------------------
+ |“Como um cliente bancário, eu quero ter acesso a um painel de controle eficiente para que eu possa gerenciar minhas finanças com facilidade.”	“Como um cliente bancário, desejo um painel intuitivo e de fácil acesso para que eu possa realizar operações bancárias sem complicações.”|Certificar que todas as funcionalidades principais estejam funcionando corretamente. |
+
+## Protótipo
+![Tela Home](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/fae7898d-dd3e-40dd-bb09-4e48cafbe345)
+
+## *US-2.4 Detalhar Conta
+# User story
+
+ |User Story
+ |-------------------------------------
+ |Eu como cliente quero poder ver todos os dados da conta, e poder alterar caso necessario.|
+
+## Protótipo
+![Meu Perfil](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/487b6d3f-9538-4849-b4db-68a7396efd55)
+
+## *US-2.5 Solicitar Cartão
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como cliente, desejo poder pedir um cartão, para fazer compras com crédito e débito.
+
+# Protótipo 
+
+![Solicitar Cartao](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/35ccf76d-cff6-4836-89b2-234f4a4558d7)
+
+## *US-2.6 Aprovar Cartao
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como cliente, gostaria de acompanhar aprovação do meu cartao até a entrega.
+
+# Protótipo 
+![Aprovação do Cartão](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/538e1584-4428-4388-8f49-8fd4d8c2f31b)
+
+## *US-2.7 Fechar Conta
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como cliente, desejo ter o poder de fechar conta, para caso o banco não atenta minhas expectativas.
+
+# Protótipo 
+
+![Apagar Conta](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/73500497/05cdf529-3822-43ca-a0de-07deb3a2dd0f)
+
+## *US-2.8 Suporte ao cliente 
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como cliente, desejo ter todo o suporte necessário, desde de antes da criação da conta até o encerramento dela.
+
+# Protótipo 
+
+![Prototipos_page-0001](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/101116408/24b0ab8f-d9b0-45dc-94e1-d82392fb13db)
+
+
+## *US-2.9 Extrato
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como usuário, desejo poder acompanhar todos os meus gastos pelo meu extrato.
+
+# Protótipo 
+
+![Prototipos_page-0002](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/101116408/cff642b4-2f24-498d-8941-044819c61f8b)
+
+## *US-2.10 Realizar Transferências 
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como usuário, desejo poder fazer transferências para outros usuários.
+
+# Protótipo 
+![Tela de transferencias](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/03151b28-381d-4e22-88c7-ed9eec0ed0f7)
+
+## *US-2.11 Pedir Emprestimo 
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+Eu como usuario, cadastrado, logado e sem debitos de emprestimos, quero fazer um emprestimo no banco. Para isso preciso ir à aba de emprestimos e selecionar a opção de pedir emprestimo. Apos isso devo colocar o valor do emprestimo e clicar no botão de confirmar.
+
+# Protótipo 
+## Tela de escolha
+
+![Emprestimo](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/0cbfe988-177b-4a87-b343-3ec08605e984)
+
+## Tela pedir Emprestimo
+![pagarEmprestimo](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/f2356257-9d0c-4be6-a0e3-f45fc31bd2c7)
+
+## *US-2.12 Pagar Emprestimo
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como usuario, cadastrado e logado, quero fazer o pgamento dos emprestimos no banco. Para isso preciso ir à aba de emprestimos e selecionar a opção de pagar emprestimo. Apos isso, devo informar a quantidade a ser paga e depois confirmar clicando no botão "Confirmar".
+
+# Protótipo 
+## Tela de pagar emprestimo
+
+![pedirEmprestimo](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/86208743/0283b7fe-9462-462c-8a03-204e674476d2)
+
+## *US-2.13 Visualizar Fatura
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como usuario, gostaria de ter as opções de: pagar, parcelar e visualizar a fatura.
+
+# Protótipo 
+![Tela extrato](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/e991998d-d12b-4fb4-8c33-e3ba74d348c8)
+
+## *US-2.14 Depositar dinheiro
+
+# User Stroy 
+
+|User Story 
+|---------------------------------------------------
+|Eu como usuario, gostaria poder depositar dinheiro na minha conta, ou na conta de outros usuários.
+
+# Protótipo 
+![Deposito](https://github.com/LuizCPorto/ES-2023-2-Maze-Bank/assets/115596240/5d51ff99-6725-4053-8386-8d4eaa4305b8)
+
+
+
+
+
+
+

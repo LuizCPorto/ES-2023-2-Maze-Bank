@@ -1,0 +1,27 @@
+#item-4 {
+    grid-row-start: 1;
+    grid-column-start: 5;
+    grid-row-end: 5;
+    grid-column-end: 7;
+}
+
+#item-4 h1 {
+    color: black;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+
+}
+
+.img-cartao-frente {
+    width: 50px;
+    float: right;
+    margin-top: 20px;
+    margin-right: 12vh;
+}
+
+.img-cartao-verso {
+    width: 50px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 12vh;
+}
