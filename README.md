@@ -1,7 +1,7 @@
 # Engenharia de software-2023.2 | Universidade Federal do Tocantins - Palmas, 2023
 #### Professor: Edeilson Milhomem <br>
 #### Monitor: João Gabriel<br>
-#### Integrantes: Luiz Carlos Porto, João Victor Ribeiro, Vitória Maria Reias Fontana, Caio Santos Silva, Yngrid Guimarães
+#### Integrantes: Luiz Carlos Porto, João Victor Ribeiro, Vitória Maria Reias Fontana(Desistente), Caio Santos Silva, Yngrid Guimarães
 # Maze-Bank
 
 ## Introdução
