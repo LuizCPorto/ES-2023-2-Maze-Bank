@@ -1,10 +1,13 @@
 # Engenharia de software-2023.2 | Universidade Federal do Tocantins - Palmas, 2023
-Professor: Edeilson Milhomem <br>
-Monitor: João Gabriel<br>
-Integrantes: Luiz Carlos Porto, João Victor Ribeiro, Vitória Maria Reias Fontana, Caio Santos Silva, Yngrid Guimarães
+#### Professor: Edeilson Milhomem <br>
+#### Monitor: João Gabriel<br>
+#### Integrantes: Luiz Carlos Porto, João Victor Ribeiro, Vitória Maria Reias Fontana, Caio Santos Silva, Yngrid Guimarães
 # Maze-Bank
 
 ## Introdução
+
+O "Maze-Bank" é um banco digital desenvolvido para todo tipo de pessoas. Sem muita burocracia para abrir a conta para que não tomamos muito seu tempo, oferecemos todo o suporte necessario, desde antes de criar conta até o momento de deletar, nosso objetivo é a democratização ao acesso bancario, podemos realizar transfêrencias, financiamentos, empréstimos, cartões de credito, tudo isso na palma da sua mão e o principal, sem burocracia.
+
 
 O projeto desenvolvido na disciplina Engenharia de Software do semestre 2023.2 é dividido em etapas. Primeiramente, os integrantes descrevem os casos expandidos de uso e user stories dos requisitos funcionais do sistema. Foi combinado a utilização da plataforma GitHub para gerenciar e controlar as versões do projeto. A turma foi dividida em 5 grupos, onde cada grupo possui um líder que deve representar e reportar toda a produtividade de seu respectivo grupo.
 
